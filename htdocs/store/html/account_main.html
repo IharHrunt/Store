@@ -1,0 +1,76 @@
+<SCRIPT>
+function setCookie (name, value, expires, path, domain, secure) {
+      document.cookie = name + "=" + escape(value) +
+        ((expires) ? "; expires=" + expires : "") +
+        ((path) ? "; path=" + path : "") +
+        ((domain) ? "; domain=" + domain : "") +
+        ((secure) ? "; secure" : "");
+}
+
+setCookie("StoreLogin", "<<str_StoreLogin>>","","/");
+
+
+function account_alert() {
+   alert("Please log in to your account first! If you are a new visitor please register to establish your account.");
+}
+
+function checkRemove() {
+
+   if (confirm('Warning! Your account will be removed from store.com database! Are you sure?')) { return true; }
+   else {
+     return false;
+   }
+}
+
+</SCRIPT>
+
+
+<TABLE cellSpacing=0 cellPadding=0 width=600 border=0 align=center>
+<tr><td colspan=1 align=left width=600 height=13></td></tr>
+<TR><TD colspan=1 bgcolor="#468499" height=1 align=left class=map></TD></TR>
+<TR><TD colspan=1 bgcolor="#ffffff" height=1 align=left class=map></TD></TR>
+<tr bgcolor="#468499"><td colspan=3 height=18 align=left><font color='#FFffff'><b>&nbsp;&nbsp;&nbsp;&nbsp;My Account</b></font></td></tr>
+<TR><TD colspan=1 bgcolor="#ffffff" height=1 align=left class=map></TD></TR>
+<TR><TD colspan=1 bgcolor="#468499" height=1 align=left class=map></TD></TR>
+</table>
+
+
+<TABLE cellSpacing=0 cellPadding=0 width=600 border=0 align=center>
+<tr>
+   <td vAlign=top align=center width=60></td>
+   <td vAlign=top align=left width=1 bgcolor="#468499"><IMG height=1 src='/store/img/pix.gif'></td>
+   <td vAlign=top align=left width=9></td>
+   <td colspan=2 height=6 width=530></td>
+</tr>
+<tr>
+   <td vAlign=top align=center><img src='/store/icon/icon_account_box.gif' width='22' height='22' border='0'></td>
+   <td vAlign=top align=left bgcolor="#468499"><IMG height=1 src='/store/img/pix.gif'></td>
+   <td vAlign=top align=left></td>
+   <td vAlign=top align=left>
+
+      <table border="0" width="490" cellspacing="0" cellpadding="2">
+      <TR><TD class=Account valign=top align=left><<str_report>></TD></TR>
+      </table>
+
+   </td>
+</tr>
+<tr>
+   <td vAlign=top align=center></td>
+   <td vAlign=top align=left bgcolor="#468499"><IMG height=1 src='/store/img/pix.gif'></td>
+   <td vAlign=top align=left></td>
+   <td colspan=2 height=12></td>
+</tr>
+<tr><td colspan=4 bgcolor="#468499" height=1><IMG height=1 src='/store/img/pix.gif'></td></tr>
+<tr>
+   <td vAlign=top align=center></td>
+   <td vAlign=top align=left bgcolor="#468499"><IMG height=1 src='/store/img/pix.gif'></td>
+   <td vAlign=top align=left></td>
+   <td colspan=2 height=12></td>
+</tr>
+<tr>
+   <td vAlign=top align=center> </td>
+   <td vAlign=top align=left bgcolor="#468499"><IMG height=1 src='/store/img/pix.gif'></td>
+   <td vAlign=top align=left></td>
+   <td vAlign=top align=left class=Account><<str_menu_account>></td>
+</tr>
+</table>

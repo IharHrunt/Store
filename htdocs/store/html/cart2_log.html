@@ -1,0 +1,181 @@
+<TABLE cellSpacing=0 cellPadding=0 width=600 border=0 align=center>
+<tr><td colspan=2 align=left width=600 height=13></td></tr>
+<TR><TD colspan=2 bgcolor="#468499" height=1 align=left class=map></TD></TR>
+<TR><TD colspan=2 bgcolor="#ffffff" height=1 align=left class=map></TD></TR>
+<tr bgcolor="#468499">
+<td height=18 align=left><font color='#FFffff'><b>&nbsp;&nbsp;&nbsp;&nbsp;Shopping Cart</b></font></td>
+<td height=18 align=right width=50%><font color='#FFffff'><b><i><<DatePurchased>></i></b>&nbsp;&nbsp;</font></td>
+</tr>
+<TR><TD colspan=2 bgcolor="#ffffff" height=1 align=left class=map></TD></TR>
+<TR><TD colspan=2 bgcolor="#468499" height=1 align=left class=map></TD></TR>
+
+<tr><td colspan=2 align=left width=600 height=2></td></tr>
+</table>
+
+
+
+<TABLE cellSpacing=1 cellPadding=0 width=600 border=0 align=center>
+<tr>
+<td vAlign=top align=center class=Account><img src="/store/img/step1.gif" width=147 height=28 border=0
+>&nbsp;<img src="/store/img/pix.gif" width=1 height=1><img src="/store/img/step2_red.gif" width=147 height=28 border=0
+>&nbsp;<img src="/store/img/pix.gif" width=1 height=1><img src="/store/img/step3.gif" width=147 height=28 border=0
+>&nbsp;<img src="/store/img/pix.gif" width=1 height=1><img src="/store/img/step4.gif" width=147 height=28 border=0></td>
+</tr>
+</table>
+
+
+
+
+
+
+<TABLE cellSpacing=1 cellPadding=0 width=602 align=center  border=0 valign="MIDDLE">
+
+<TR><TD colspan=5 height=5 align=left class=map></TD></TR>
+<TR>
+ <TD height=18 width=90 bgcolor="#468499" class=Account align=middle><font color=#ffffff><b>Unit</b></font></TD>
+ <TD width=312 bgcolor="#468499" class=Account align=middle ><font color=#ffffff><b>Name</b></font></TD>
+ <TD width=80 bgcolor="#468499" class=Account align=middle ><font color=#ffffff><b>Unit Price,&nbsp;$</b></font></TD>
+ <TD width=60 bgcolor="#468499" class=Account align=middle ><font color=#ffffff><b>Quantity</b></font></TD>
+ <TD width=60 bgcolor="#468499" class=Account align=middle ><font color=#ffffff><b>Total,&nbsp;$</b></font></TD>
+</TR>
+
+
+<<str_table>>
+</table>
+
+
+<TABLE cellSpacing=0 cellPadding=3 width="600" align=center border=0 valign="bottom">
+<TR>
+ <TD height=15 colspan=5 align=right></TD>
+</TR>
+</TABLE>
+
+
+
+ <TABLE cellSpacing=0 cellPadding=0 width=600 border=0 align=center>
+
+  <tr><td align=center colspan=4  height=5><IMG height=1 src='/store/img/pix.gif'></td></tr>
+  <tr><td align=center colspan=4  bgcolor="#468499" height=17  class=Account><font color='#FFffff'><b>Total Cost</b></font></td></tr>
+  <tr><td align=center colspan=4  width=600 height=1><IMG height=2 src='/store/img/pix.gif'></td></tr>
+
+  <tr>
+    <td vAlign=top align=center width=470></td>
+    <td vAlign=top align=left width=1 bgcolor="#468499"><IMG height=1 src='/store/img/pix.gif'></td>
+    <td vAlign=top align=left width=9></td>
+    <td vAlign=top align=left width=110>
+
+
+    </td>
+  </tr>
+  <tr>
+    <td vAlign=middle align=right class=Account height=40>
+    <b>Sub-Total:&nbsp;&nbsp;&nbsp;<br>
+    Established Discount Level:&nbsp;&nbsp;&nbsp;</b></td>
+    <td vAlign=top align=left bgcolor="#468499"><IMG height=1 src='/store/img/pix.gif'></td>
+    <td vAlign=top align=right </td>
+    <td  align=right colspan=2 class=Account>
+     <b>$ <<SubTotal>></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+     <b>% <<EstabDiscountLevel>></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+
+</td>
+  </tr>
+  <tr><td align=center colspan=4 bgcolor="#468499"  height=1><IMG height=1 src='/store/img/pix.gif'></td></tr>
+  <tr>
+    <td vAlign=top align=center ></td>
+    <td vAlign=top align=left bgcolor="#468499"><IMG height=1 src='/store/img/pix.gif'></td>
+    <td vAlign=top align=left ></td>
+    <td colspan=2 height=12 ></td>
+  </tr>
+  <tr>
+    <td vAlign=middle align=right class=Account><b>Total:&nbsp;&nbsp;&nbsp;</b><br></td>
+    <td vAlign=top align=left  bgcolor="#468499"><IMG height=1 src='/store/img/pix.gif'></td>
+    <td vAlign=top align=left ></td>
+    <td vAlign=top align=right class=Account><font color=#ff0000><b>$ <<Total>></b></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td vAlign=middle align=right class=Account></td>
+    <td vAlign=top align=left bgcolor="#468499"><IMG height=1 src='/store/img/pix.gif'></td>
+    <td vAlign=top align=left ></td>
+    <td vAlign=top align=right class=Account height=10></td>
+  </tr>
+
+ </table>
+
+<br>
+
+
+
+<FORM name="form1" METHOD="POST" ACTION="<<path_cgi_https>>cart.pl">
+<input type=hidden name=comCart value='Enter' >
+
+<TABLE cellSpacing=0 cellPadding=0 width=600 border=0 align=center>
+<TR><TD colspan=3 bgcolor="#468499" height=1 align=left class=map></TD></TR>
+<TR><TD colspan=3 bgcolor="#ffffff" height=1 align=left class=map></TD></TR>
+<tr>
+
+<td align=center colspan=3 width=600  bgcolor="#468499" height=18 class=Account><font color='#FFffff'><b>For registered users</b></font></td>
+</tr>
+<TR><TD colspan=3 bgcolor="#ffffff" height=1 align=left class=map></TD></TR>
+<TR><TD colspan=3 bgcolor="#468499" height=1 align=left class=map></TD></TR>
+<TR><TD colspan=3 bgcolor="#ffffff" height=5 align=left class=map></TD></TR>
+</table>
+
+                     <table border="0" width="424" cellspacing="0" cellpadding="0" align=center>
+                     <TR><td align=left width=424  height=9><IMG height=1 src='/store/img/pix.gif'></td></TR>
+                     <TR>
+                        <TD width=424 class=Account valign=top align=center>
+
+                           <font color='red'><b><<str_report>></b></font>
+
+                               <table border="0" width="424" cellspacing="0" cellpadding="2">
+                            <TR>
+                              <TD width=80 class=Account align=right></TD>
+                               <TD width=60 class=Account align=left><b>Login:</b>&nbsp;</TD>
+                               <TD class=Account><INPUT type=text name=user value="<<user>>"  maxLength=20  style="BORDER-RIGHT: #468499 1px solid; BORDER-TOP: #468499 1px solid;
+                                   FONT-SIZE: 12px; BORDER-LEFT: #468499 1px solid; WIDTH: 100px; COLOR: #182520; BORDER-BOTTOM: #468499 1px solid; FONT-FAMILY: Arial, Helvetica, sans-serif" ></TD>
+                            </TR>
+                            <TR>
+                               <TD width=80 class=Account align=right></TD>
+                               <TD width=60 class=Account align=left><b>Password:</b>&nbsp;</TD>
+                               <TD  class=Account><INPUT type=PASSWORD name=pass value="<<pass>>"  maxLength=10  style="BORDER-RIGHT: #468499 1px solid; BORDER-TOP: #468499 1px solid;
+                                   FONT-SIZE: 12px; BORDER-LEFT: #468499 1px solid; WIDTH: 100px; COLOR: #182520; BORDER-BOTTOM: #468499 1px solid; FONT-FAMILY: Arial, Helvetica, sans-serif" > (case sensitive)
+                               </TD>
+                            </TR>
+                            <TR><td colspan=3 align=left height=6><IMG height=1 src='/store/img/pix.gif'></td></TR>
+
+                            <TR>
+                              <TD width=80 class=Account align=right></TD>
+                               <TD width=60 class=Account align=left></TD>
+                               <TD class=Account valign=bottom><INPUT type="image"  src="/store/btn/btn_step_next.gif"  width=97 height=20  border=0 name="bsubmit3" title="next step">&nbsp;&nbsp;<A href="<<path_cgi>>cart.pl?comCart=Step1" title="step back"><IMG  src="/store/btn/btn_step_back.gif"  width=97 height=20  border=0></A></TD>
+                            </TR>
+                            </table>
+                         </TD>
+                      </TR>
+                      </table>
+
+</form>
+
+
+<TABLE cellSpacing=0 cellPadding=0 width=606 border=0 align=center>
+<tr>
+<td vAlign=top align=middle width=3></td>
+<td align=center width=606 class=Account>
+<img src='/store/icon/icon_help.gif' border='0'>&nbsp;&nbsp;If you are a new visitor please complete the following <a href="<<path_cgi_https>>account.pl?com=New" class=PathSite2><b><u>on-line form</u></b></a> to register. &nbsp; <a href='<<path_cgi_http>>password.pl' class=PathSite2><b><u>Forgot password?</u></b></a>
+</td>
+<td vAlign=top align=middle width=3></td>
+</tr>
+
+</table>
+
+<br>
+<TABLE cellSpacing=3 cellPadding=0 width=606 border=0 align=center>
+<TR><TD colspan=3 bgcolor="#ffffff" height=5 align=left class=map></TD></TR>
+<tr>
+<td vAlign=top align=middle width=3></td>
+<td align=center width=606  bgcolor="#468499" height=1></td>
+<td vAlign=top align=middle width=3></td>
+</tr>
+</table>
+
+

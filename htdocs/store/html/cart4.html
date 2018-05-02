@@ -1,0 +1,366 @@
+<TABLE cellSpacing=0 cellPadding=0 width=600 border=0 align=center>
+<tr><td colspan=2 align=left width=600 height=13></td></tr>
+<TR><TD colspan=2 bgcolor="#468499" height=1 align=left class=map></TD></TR>
+<TR><TD colspan=2 bgcolor="#ffffff" height=1 align=left class=map></TD></TR>
+<tr bgcolor="#468499">
+<td height=18 align=left><font color='#FFffff'><b>&nbsp;&nbsp;&nbsp;&nbsp;Shopping Cart</b></font></td>
+<td height=18 align=right width=50%><font color='#FFffff'><b><i><<DatePurchased>></i></b>&nbsp;&nbsp;</font></td>
+</tr>
+<TR><TD colspan=2 bgcolor="#ffffff" height=1 align=left class=map></TD></TR>
+<TR><TD colspan=2 bgcolor="#468499" height=1 align=left class=map></TD></TR>
+<tr><td colspan=2 align=left width=600 height=2></td></tr>
+</table>
+
+
+<TABLE cellSpacing=1 cellPadding=0 width=600 border=0 align=center>
+<tr>
+<td vAlign=top align=center class=Account><img src="/store/img/step1.gif" width=147 height=28 border=0
+>&nbsp;<img src="/store/img/pix.gif" width=1 height=1><img src="/store/img/step2.gif" width=147 height=28 border=0
+>&nbsp;<img src="/store/img/pix.gif" width=1 height=1><img src="/store/img/step3.gif" width=147 height=28 border=0
+>&nbsp;<img src="/store/img/pix.gif" width=1 height=1><img src="/store/img/step4_red.gif" width=147 height=28 border=0></td>
+</tr>
+</table>
+
+
+
+
+
+<TABLE cellSpacing=1 cellPadding=0 width=602 align=center  border=0 valign="MIDDLE">
+
+<TR><TD colspan=5 height=5 align=left class=map></TD></TR>
+<TR>
+ <TD height=18 width=90 bgcolor="#468499" class=Account align=middle><font color=#ffffff><b>Unit</b></font></TD>
+ <TD width=312 bgcolor="#468499" class=Account align=middle ><font color=#ffffff><b>Name</b></font></TD>
+ <TD width=80 bgcolor="#468499" class=Account align=middle ><font color=#ffffff><b>Unit Price,&nbsp;$</b></font></TD>
+ <TD width=60 bgcolor="#468499" class=Account align=middle ><font color=#ffffff><b>Quantity</b></font></TD>
+ <TD width=60 bgcolor="#468499" class=Account align=middle ><font color=#ffffff><b>Total,&nbsp;$</b></font></TD>
+</TR>
+
+<<str_table>>
+</table>
+
+
+<TABLE cellSpacing=0 cellPadding=3 width="600" align=center border=0 valign="bottom">
+<TR>
+ <TD height=15 colspan=5 align=right></TD>
+</TR>
+</TABLE>
+
+
+
+ <TABLE cellSpacing=0 cellPadding=0 width=600 border=0 align=center>
+
+  <tr><td align=center colspan=4  height=5><IMG height=1 src='/store/img/pix.gif'></td></tr>
+  <tr><td align=center colspan=4  bgcolor="#468499" height=17 class=Account><font color='#FFffff'><b>Total Cost</b></font></td></tr>
+  <tr><td align=center colspan=4  width=600 height=1><IMG height=2 src='/store/img/pix.gif'></td></tr>
+
+  <tr>
+    <td vAlign=top align=center width=470></td>
+    <td vAlign=top align=left width=1 bgcolor="#468499"><IMG height=1 src='/store/img/pix.gif'></td>
+    <td vAlign=top align=left width=9></td>
+    <td vAlign=top align=left width=110>
+
+
+    </td>
+  </tr>
+  <tr>
+    <td vAlign=middle align=right class=Account height=40>
+    <b>Sub-Total:&nbsp;&nbsp;&nbsp;<br>
+    Established Discount Level:&nbsp;&nbsp;&nbsp;</b></td>
+    <td vAlign=top align=left bgcolor="#468499"><IMG height=1 src='/store/img/pix.gif'></td>
+    <td vAlign=top align=right </td>
+    <td  align=right colspan=2 class=Account>
+     <b>$ <<SubTotal>></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+     <b>% <<EstabDiscountLevel>></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+
+</td>
+  </tr>
+  <tr><td align=center colspan=4 bgcolor="#468499"  height=1><IMG height=1 src='/store/img/pix.gif'></td></tr>
+  <tr>
+    <td vAlign=top align=center ></td>
+    <td vAlign=top align=left bgcolor="#468499"><IMG height=1 src='/store/img/pix.gif'></td>
+    <td vAlign=top align=left ></td>
+    <td colspan=2 height=12 ></td>
+  </tr>
+  <tr>
+    <td vAlign=middle align=right class=Account><b>Total:&nbsp;&nbsp;&nbsp;</b><br></td>
+    <td vAlign=top align=left  bgcolor="#468499"><IMG height=1 src='/store/img/pix.gif'></td>
+    <td vAlign=top align=left ></td>
+    <td vAlign=top align=right class=Account><font color=#ff0000><b>$ <<Total>></b></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td vAlign=middle align=right class=Account></td>
+    <td vAlign=top align=left bgcolor="#468499"><IMG height=1 src='/store/img/pix.gif'></td>
+    <td vAlign=top align=left ></td>
+    <td vAlign=top align=right class=Account height=10></td>
+  </tr>
+
+ </table>
+
+
+
+<FORM name="form2" METHOD="POST" ACTION="<<path_cgi_https>>cart.pl"  target=printer>
+<input type=hidden name=comCart value="Printer">
+
+<input type=hidden name=FirstName value="<<FirstName>>">
+<input type=hidden name=LastName value="<<LastName>>">
+<input type=hidden name=Title value="<<Title>>">
+<input type=hidden name=CompanyName value="<<CompanyName>>">
+<input type=hidden name=Email value="<<Email>>">
+
+<input type=hidden name=StreetAddress value="<<StreetAddress>>">
+<input type=hidden name=City value="<<City>>">
+<input type=hidden name=State value="<<State>>">
+<input type=hidden name=Country value="<<Country>>">
+<input type=hidden name=Phone value="<<Phone>>">
+<input type=hidden name=Fax value="<<Fax>>">
+<input type=hidden name=Zip value="<<Zip>>">
+
+<input type=hidden name=ShippingStreetAddress value="<<ShippingStreetAddress>>">
+<input type=hidden name=ShippingCity value="<<ShippingCity>>">
+<input type=hidden name=ShippingState value="<<ShippingState>>">
+<input type=hidden name=ShippingCountry value="<<ShippingCountry>>">
+<input type=hidden name=ShippingPhone value="<<ShippingPhone>>">
+<input type=hidden name=ShippingFax value="<<ShippingFax>>">
+<input type=hidden name=ShippingZip value="<<ShippingZip>>">
+<input type=hidden name=PaymentTerms value="<<PaymentTerms>>">
+
+
+<input type=hidden name=CreditCardType value="<<CreditCardType>>">
+<input type=hidden name=CreditCardNumber value="<<CreditCardNumber>>">
+<input type=hidden name=ExpirationMonth value="<<ExpirationMonth>>">
+<input type=hidden name=ExpirationYear value="<<ExpirationYear>>">
+<input type=hidden name=SecurityCode value="<<SecurityCode>>">
+<input type=hidden name=NameOnCard value="<<NameOnCard>>">
+</form>
+
+
+<FORM name="form1" METHOD="POST" ACTION="<<path_cgi_https>>cart.pl">
+<input type=hidden name=comCart value="Step5">
+
+<input type=hidden name=FirstName value="<<FirstName>>">
+<input type=hidden name=LastName value="<<LastName>>">
+<input type=hidden name=Title value="<<Title>>">
+<input type=hidden name=CompanyName value="<<CompanyName>>">
+<input type=hidden name=Email value="<<Email>>">
+
+<input type=hidden name=StreetAddress value="<<StreetAddress>>">
+<input type=hidden name=City value="<<City>>">
+<input type=hidden name=State value="<<State>>">
+<input type=hidden name=Country value="<<Country>>">
+<input type=hidden name=Phone value="<<Phone>>">
+<input type=hidden name=Fax value="<<Fax>>">
+<input type=hidden name=Zip value="<<Zip>>">
+
+<input type=hidden name=ShippingStreetAddress value="<<ShippingStreetAddress>>">
+<input type=hidden name=ShippingCity value="<<ShippingCity>>">
+<input type=hidden name=ShippingState value="<<ShippingState>>">
+<input type=hidden name=ShippingCountry value="<<ShippingCountry>>">
+<input type=hidden name=ShippingPhone value="<<ShippingPhone>>">
+<input type=hidden name=ShippingFax value="<<ShippingFax>>">
+<input type=hidden name=ShippingZip value="<<ShippingZip>>">
+<input type=hidden name=PaymentTerms value="<<PaymentTerms>>">
+
+
+<input type=hidden name=CreditCardType value="<<CreditCardType>>">
+<input type=hidden name=CreditCardNumber value="<<CreditCardNumber>>">
+<input type=hidden name=ExpirationMonth value="<<ExpirationMonth>>">
+<input type=hidden name=ExpirationYear value="<<ExpirationYear>>">
+<input type=hidden name=SecurityCode value="<<SecurityCode>>">
+<input type=hidden name=NameOnCard value="<<NameOnCard>>">
+
+
+   <table border="0" width="600" cellspacing="0" cellpadding="2" align=center>
+
+   <TR><td colspan=3 align=left  height=1><IMG height=1 src='/store/img/pix.gif'></td></TR>
+   <TR><td colspan=3 align=center  bgcolor="#468499" class=Account height=18>&nbsp;<font color="#ffffff"><b>Customer Information</b></font></td></TR>
+   <TR><td colspan=3 align=left  height=12><IMG height=1 src='/store/img/pix.gif'></td></TR>
+
+   <TR>
+   <TD width=285 class=Account valign=top>
+
+
+      <table border="0" width="285" cellspacing="1" cellpadding="2">
+      <TR>
+         <TD width=100 class=Account bgcolor=#d8e9f0>First Name</TD>
+         <TD width=185 class=Account bgcolor=#d8e9f0><<FirstName>>&nbsp;</TD>
+      </TR>
+      <TR>
+         <TD class=Account>Last Name</TD>
+         <TD class=Account><<LastName>></TD>
+      </TR>
+      <TR>
+         <TD class=Account bgcolor=#d8e9f0>Title</TD>
+         <TD class=Account bgcolor=#d8e9f0><<Title>></TD>
+      </TR>
+
+      </table>
+    </TD>
+    <TD width=30 class=Account></TD>
+
+    <TD width=285 class=Account valign=top>
+      <table border="0" width="285" cellspacing="1" cellpadding="2">
+
+      <TR>
+         <TD width=100 class=Account bgcolor=#d8e9f0>Company Name</TD>
+         <TD width=185 class=Account bgcolor=#d8e9f0><<CompanyName>></TD>
+      </TR>
+      <TR>
+         <TD class=Account>E-mail</TD>
+         <TD class=Account><<Email>></TD>
+      </TR>
+      <TR>
+         <TD class=Account bgcolor=#d8e9f0>&nbsp;</TD>
+         <TD class=Account bgcolor=#d8e9f0>&nbsp;</TD>
+      </TR>
+
+      </table>
+    </TD>
+    </TR>
+
+   <TR><td colspan=3 align=left width=600  height=12><IMG height=1 src='/store/img/pix.gif'></td></TR>
+   <TR>
+      <TD width=237 valign=top bgcolor="#468499" class=Account>&nbsp;&nbsp;<font color="#ffffff"><b>Billing Address</b></font></td>
+      <TD width=24 valign=top  ></TD>
+      <TD width=237 valign=top bgcolor="#468499" class=Account >&nbsp;&nbsp;<font color="#ffffff"><b>Shipping Address</b></font></td>
+   </TR>
+
+   <TR><td colspan=3 align=left width=600  height=12><IMG height=1 src='/store/img/pix.gif'></td></TR>
+   <TR>
+   <TD width=285 class=Account valign=top>
+
+      <table border="0" width="285" cellspacing="1" cellpadding="2">
+      <TR>
+         <TD width=100 class=Account bgcolor=#d8e9f0>Street Address</TD>
+         <TD width=185 class=Account bgcolor=#d8e9f0><<StreetAddress>></TD>
+      </TR>
+      <TR>
+         <TD class=Account>City</TD>
+         <TD class=Account><<City>></TD>
+      </TR>
+      <TR>
+         <TD class=Account bgcolor=#d8e9f0>State</TD>
+         <TD class=Account bgcolor=#d8e9f0><<State>></TD>
+      </TR>
+      <TR>
+         <TD class=Account>Country </TD>
+         <TD class=Account><<Country>></TD>
+      </TR>
+      <TR>
+         <TD class=Account bgcolor=#d8e9f0>Zip </TD>
+         <TD class=Account bgcolor=#d8e9f0><<Zip>></TD>
+      </TR>
+      <TR>
+         <TD class=Account>Phone</TD>
+         <TD class=Account><<Phone>></TD>
+      </TR>
+      <TR>
+         <TD class=Account bgcolor=#d8e9f0>Fax </TD>
+         <TD class=Account bgcolor=#d8e9f0><<Fax>></TD>
+      </TR>
+
+      </table>
+    </TD>
+    <TD width=30 class=Account></TD>
+
+    <TD width=285 class=Account valign=top>
+
+      <table border="0" width="285" cellspacing="1" cellpadding="2">
+      <TR>
+         <TD width=100 class=Account bgcolor=#d8e9f0>Street Address </TD>
+         <TD width=185 class=Account bgcolor=#d8e9f0><<ShippingStreetAddress>></TD>
+      </TR>
+      <TR>
+         <TD class=Account>City</TD>
+         <TD class=Account><<ShippingCity>></TD>
+      </TR>
+      <TR>
+         <TD class=Account bgcolor=#d8e9f0>State</TD>
+         <TD class=Account bgcolor=#d8e9f0><<ShippingState>></TD>
+      </TR>
+      <TR>
+         <TD class=Account>Country</TD>
+         <TD class=Account><<ShippingCountry>></TD>
+      </TR>
+      <TR>
+         <TD class=Account bgcolor=#d8e9f0>Zip</TD>
+         <TD class=Account bgcolor=#d8e9f0><<ShippingZip>></TD>
+      </TR>
+      <TR>
+         <TD class=Account>Phone</TD>
+         <TD class=Account><<ShippingPhone>></TD>
+      </TR>
+      <TR>
+         <TD class=Account bgcolor=#d8e9f0>Fax </TD>
+         <TD class=Account bgcolor=#d8e9f0><<ShippingFax>></TD>
+      </TR>
+
+      </table>
+
+    </TD>
+    </TR>
+
+
+</table>
+
+
+
+   <table border="0" width="600" cellspacing="0" cellpadding="2" align=center>
+   <TR><td colspan=3 align=left  height=22><IMG height=1 src='/store/img/pix.gif'></td></TR>
+   <TR><td colspan=3 align=center  bgcolor="#468499" class=Account>&nbsp;<font color="#ffffff"><b>Payment Terms</b></font></td></TR>
+   <TR><td colspan=3 align=left  height=12><IMG height=1 src='/store/img/pix.gif'></td></TR>
+   <TR><td colspan=3 align=center ><<str_PaymentTerms>></td></tr>
+   </table>
+
+
+   <table border="0" width="604" cellspacing="0" cellpadding="2" align=center>
+   <TR><td colspan=3 align=left  height=10><IMG height=1 src='/store/img/pix.gif'></td></TR>
+   <TR><td colspan=3 align=center  bgcolor="#468499"  class=Account>&nbsp;<font color="#ffffff"><b>Conditions of Sale </b></font></td></TR>
+   <TR><td colspan=3 align=left  height=12><IMG height=1 src='/store/img/pix.gif'></td></TR>
+
+   <TR><td colspan=3 align=left><<ConditionsOfSale>></td></tr>
+   <TR><td colspan=3 align=left  height=12><IMG height=1 src='/store/img/pix.gif'></td></TR>
+   <TR><td colspan=3 align=center  class=Account><b> I read and agree with above described conditions of the sale</b>.</td></tr>
+   <TR><td colspan=3 align=left  height=18><IMG height=1 src='/store/img/pix.gif'></td></TR>
+   </table>
+
+
+   <table border="0" width="550" cellspacing="0" cellpadding="0" align=center>
+   <TR><td colspan=3 align=left  height=10><IMG height=1 src='/store/img/pix.gif'></td></TR>
+
+   <TR height=10><td align=left valign=bottom class=Account><<NameOnCard>></td><td valign=bottom align=center  class=Account ></td><td  valign=bottom align=right  class=Account ><<DatePurchased>>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+   <TR><td height=1 align=left  class=Account >____________________________</td><td align=center  class=Account >________________________</td><td align=right  class=Account >_________________</td>
+   <TR height=10><td align=left  class=Account >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Name)</td><td align=center  class=Account >(Signature)</td><td align=right  class=Account >(Date)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+   <TR><td colspan=3 align=left  height=30><IMG height=1 src='/store/img/pix.gif'></td></TR>
+   </table>
+
+
+
+  <table border="0" width="498" cellspacing="0" cellpadding="2" align=center>
+  <TR>
+  <td align=right><a href="javascript:print_form()" title="print form"><IMG  src="/store/btn/btn_print_red.gif"  width=97 height=20  border=0></A></td>
+  <td width=105 align=center><div class=expanded id='finish'><a href="javascript:alert('Before to Finish.\n Please print out this form and sign and then fax/email(after scanning) to the Store.')" title="finish"><IMG  src="/store/btn/btn_finish.gif"  width=97 height=20  border=0></A></div><div class=collapsed id='finish_red'><a href="javascript:enter()" title="finish"><IMG  src="/store/btn/btn_finish_red.gif"  width=97 height=20  border=0></A></div></td>      
+  <td align=left><A href="javascript:self.history.back()" title="step back"><IMG  src="/store/btn/btn_step_back.gif"  width=97 height=20  border=0></A></td>
+   <TR><td colspan=3 align=left  height=30><IMG height=1 src='/store/img/pix.gif'></td></TR>
+  </TR>
+
+   </table>
+<SCRIPT>
+ function print_form() {   
+
+    document.getElementById('finish_red').className = "expanded";
+    document.getElementById('finish').className = "collapsed";
+ 
+    document.form2.submit();
+
+ }
+
+ function enter() {
+   document.form1.submit();
+ }
+
+</SCRIPT>
+
+
+</form>

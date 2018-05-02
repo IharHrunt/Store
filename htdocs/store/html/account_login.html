@@ -1,0 +1,90 @@
+<TABLE cellSpacing=0 cellPadding=0 width=600 border=0 align=center>
+<tr><td colspan=1 align=left width=600 height=13></td></tr>
+<TR><TD colspan=1 bgcolor="#468499" height=1 align=left class=map></TD></TR>
+<TR><TD colspan=1 bgcolor="#ffffff" height=1 align=left class=map></TD></TR>
+<tr bgcolor="#468499"><td colspan=3 height=18 align=left><font color='#FFffff'><b>&nbsp;&nbsp;&nbsp;&nbsp;My Account</b></font></td></tr>
+<TR><TD colspan=1 bgcolor="#ffffff" height=1 align=left class=map></TD></TR>
+<TR><TD colspan=1 bgcolor="#468499" height=1 align=left class=map></TD></TR>
+</table>
+
+
+<FORM name="form1" METHOD="POST" ACTION="<<path_cgi_https>>account.pl"   style='margin:0'>
+<input type=hidden name=com value='Enter' >
+
+
+<TABLE cellSpacing=0 cellPadding=0 width=560 border=0 align=center>
+<tr>
+   <td vAlign=top align=center width=65></td>
+   <td vAlign=top align=left width=1 bgcolor="#468499"><IMG height=1 src='/store/img/pix.gif'></td>
+   <td vAlign=top align=left width=9></td>
+   <td colspan=2 height=6 width=485></td>
+</tr>
+<tr>
+   <td vAlign=top align=center></td>
+   <td vAlign=top align=left bgcolor="#468499"><IMG height=1 src='/store/img/pix.gif'></td>
+   <td vAlign=top align=left ></td>
+   <td vAlign=top align=left >
+
+       <table border="0" width="485" cellspacing="0" cellpadding="2">
+       <TR><td align=left height=6><IMG height=1 src='/store/img/pix.gif'></td></TR>
+       <TR>
+           <TD class=Account valign=top align=center>
+               <font color='red'><b><<str_report>></b></font>
+               <table border="0" width="485" cellspacing="0" cellpadding="2">
+               <TR>
+                  <TD width=100 class=Account align=right>&nbsp;</TD>
+                  <TD width=40 class=Account align=left><b>Login:</b>&nbsp;</TD>
+                  <TD width=345 class=Account><INPUT type=text name=user value="<<user>>"  maxLength=20  style="BORDER-RIGHT: #468499 1px solid; BORDER-TOP: #468499 1px solid;
+                            FONT-SIZE: 12px; BORDER-LEFT: #468499 1px solid; WIDTH: 135px; COLOR: #182520; BORDER-BOTTOM: #468499 1px solid; FONT-FAMILY: Arial" ></TD>
+               </TR>
+               <TR>
+                  <TD class=Account align=right></TD>
+                  <TD class=Account align=left><b>Password:</b>&nbsp;</TD>
+                  <TD  class=Account><INPUT type=PASSWORD name=pass value="<<pass>>"  maxLength=10  style="BORDER-RIGHT: #468499 1px solid; BORDER-TOP: #468499 1px solid;
+                             FONT-SIZE: 12px; BORDER-LEFT: #468499 1px solid; WIDTH: 135px; COLOR: #182520; BORDER-BOTTOM: #468499 1px solid; FONT-FAMILY: Arial" > (case sensitive)
+                  </TD>
+               </TR>
+               <TR><td colspan=3 align=left height=6><IMG height=1 src='/store/img/pix.gif'></td></TR>
+               <TR>
+                  <TD class=Account align=right></TD>
+                  <TD class=Account align=left></TD>
+                  <TD class=Account>
+                   <INPUT type="image"  src=/store/btn/btn_enter.gif  width=64 height=20 border=0 name="bsubmit3"  title="enter account" > 
+                       &nbsp;&nbsp;<a href="javascript:document.form1.reset()" title="reset"><img  src="/store/btn/btn_reset.gif" width="64" height="20" border=0 alt="reset"></a>
+                  </TD>
+               </TR>
+               </table>
+           </TD>
+        </TR>
+        </table>
+   </td>
+</tr>
+<tr>
+   <td vAlign=top align=center></td>
+   <td vAlign=top align=left bgcolor="#468499"><IMG height=1 src='/store/img/pix.gif'></td>
+   <td vAlign=top align=left ></td>
+   <td colspan=2 height=12 ></td>
+</tr>
+<tr><td colspan=4 bgcolor="#468499" height=1><IMG height=1 src='/store/img/pix.gif'></td></tr>
+<tr>
+    <td vAlign=top align=center></td>
+    <td vAlign=top align=left bgcolor="#468499"><IMG height=1 src='/store/img/pix.gif'></td>
+    <td vAlign=top align=left ></td>
+    <td colspan=2 height=12 ></td>
+</tr>
+<tr>
+    <td vAlign=top align=center><img src='/store/icon/icon_help.gif' border='0'> </td>
+    <td vAlign=top align=left bgcolor="#468499"><IMG height=1 src='/store/img/pix.gif'></td>
+    <td vAlign=top align=left></td>
+    <td vAlign=top align=left class=Account>
+           <a href='<<path_cgi_http>>password.pl' class=PathSite2><b><u>Forgot password?</u></b></a>
+           <br><br>
+           If you are a new visitor please complete the following <a href="<<path_cgi_https>>account.pl?com=New" class=PathSite2><b>
+           <u>on-line form</u></b></a> to register<br><br>
+    </td>
+</tr>
+</table>
+</form>
+
+
+

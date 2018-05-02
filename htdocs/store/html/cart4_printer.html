@@ -1,0 +1,247 @@
+<html>
+<head>
+<title>Store.com</title>
+<link href="/store/js/store.css" rel="STYLESHEET" type="text/css">
+</head>
+<body bgcolor="#ffffff" marginwidth=0 marginheight=0   onload="window.print()">
+
+
+<center>
+
+
+ <table border="0" width="600" cellspacing="0" cellpadding="2" align=center>
+ <TR><td  align=center class=Printer>
+<b>Please print out this form and sign and then fax/email(after scanning) to the Store</b><br>
+Phone: <<PhoneStore>>&nbsp;&nbsp;Fax: <<FaxStore>>&nbsp;&nbsp;E-mail: <a href="mailto:<<EmailStore>>"><u><font color=#000000><<EmailStore>></font></u></a>
+</td></TR>
+ <TR><td align=center class=Printer height=10></td></TR>
+ </table>
+
+
+<TABLE cellSpacing=3 cellPadding=0 width=600 border=0 align=center>
+<tr>
+<td vAlign=top align=middle width=3></td>
+<td align=left width=594  height=10><TABLE cellSpacing=0 cellPadding=0 width=100% border=0 align=center>
+   <tr><td vAlign=top align=left width=50% class=Printer><font color='#000000'><b>&nbsp;Store Shopping Cart</b></font></td>
+       <td vAlign=top align=right width=50% class=Printer><font color='#000000'><b><i><<DatePurchased>></i></b>&nbsp;&nbsp;</font></td>
+   </tr>
+   </table></td>
+<td vAlign=top align=middle width=3></td>
+<tr>
+</tr>
+
+</table>
+
+
+
+
+<TABLE cellSpacing=1 cellPadding=0 width=600 align=center  border=1 valign="MIDDLE">
+<TR>
+ <TD height=18 width=80 class=Printer align=middle><font color=#000000><b>Unit</b></font></TD>
+ <TD width=330 class=Printer align=middle ><font color=#000000><b>Name</b></font></TD>
+ <TD width=70  class=Printer align=middle ><font color=#000000><b>Unit Price,&nbsp;$</b></font></TD>
+ <TD width=50  class=Printer align=middle ><font color=#000000><b>Quantity</b></font></TD>
+ <TD width=70  class=Printer align=middle ><font color=#000000><b>Total,&nbsp;$</b></font></TD>
+</TR>
+
+<<str_table>>
+</table>
+
+
+
+
+ <TABLE cellSpacing=0 cellPadding=0 width=600 border=0 align=center>
+
+  <tr>
+    <td vAlign=middle align=right width=515 class=Printer height=40>
+    <b>Sub-Total:&nbsp;<br>
+    Established Discount Level:&nbsp;</b></td>
+    <td vAlign=top align=left width=1><IMG height=1 src='/store/img/pix.gif'></td>
+    <td vAlign=top align=right width=9></td>
+    <td  align=right colspan=2  width=75  class=Printer>
+     <b>$ <<SubTotal>></b><br>
+     <b>% <<EstabDiscountLevel>></b></td>
+
+
+</td>
+  </tr>
+  <tr><td align=center colspan=4 height=1><IMG height=1 src='/store/img/pix.gif'></td></tr>
+  <tr>
+    <td vAlign=middle align=right class=Printer><b>Total:&nbsp;</b><br></td>
+    <td vAlign=top align=left ><IMG height=1 src='/store/img/pix.gif'></td>
+    <td vAlign=top align=left ></td>
+    <td vAlign=top align=right class=Printer><font color=#000000><b>$ <<Total>></b></font></td>
+  </tr>
+ </table>
+
+
+
+   <table border="0" width="600" cellspacing="0" cellpadding="2" align=center>
+
+   <TR><td colspan=3 align=left  height=1><IMG height=1 src='/store/img/pix.gif'></td></TR>
+   <TR><td colspan=3 align=center class=Printer >&nbsp;<font color="#000000"><b>Customer Information</b></font></td></TR>
+   <TR><td colspan=3 align=left  height=4><IMG height=1 src='/store/img/pix.gif'></td></TR>
+
+   <TR>
+   <TD width=285 class=Printer valign=top>
+
+
+      <table border="1" width="285" cellspacing="1" cellpadding="2">
+      <TR>
+         <TD width=90 class=Printer >First Name</TD>
+         <TD width=195 class=Printer><<FirstName>>&nbsp;</TD>
+      </TR>
+      <TR>
+         <TD class=Printer>Last Name</TD>
+         <TD class=Printer><<LastName>>&nbsp;</TD>
+      </TR>
+      <TR>
+         <TD class=Printer >Title</TD>
+         <TD class=Printer><<Title>>&nbsp;</TD>
+      </TR>
+
+      </table>
+    </TD>
+    <TD width=30 class=Printer></TD>
+
+    <TD width=285 class=Printer valign=top>
+      <table border="1" width="285" cellspacing="1" cellpadding="2">
+
+      <TR>
+         <TD width=90 class=Printer>Company Name</TD>
+         <TD width=195 class=Printer><<CompanyName>></TD>
+      </TR>
+      <TR>
+         <TD class=Printer>E-mail</TD>
+         <TD class=Printer><<Email>></TD>
+      </TR>
+       </table>
+    </TD>
+    </TR>
+
+   <TR><td colspan=3 align=left  height=12><IMG height=1 src='/store/img/pix.gif'></td></TR>
+   <TR>
+      <TD valign=top class=Printer >&nbsp;<font color="#000000"><b>Billing Address</b></font></td>
+      <TD valign=top  ></TD>
+      <TD valign=top class=Printer >&nbsp;<font color="#000000"><b>Shipping Address</b></font></td>
+   </TR>
+
+   <TR><td colspan=3 align=left height=4><IMG height=1 src='/store/img/pix.gif'></td></TR>
+   <TR>
+   <TD class=Printer valign=top>
+
+      <table border="1" width="285" cellspacing="1" cellpadding="2">
+      <TR>
+         <TD width=90 class=Printer>Street Address</TD>
+         <TD width=195 class=Printer><<StreetAddress>></TD>
+      </TR>
+      <TR>
+         <TD class=Printer>City</TD>
+         <TD class=Printer><<City>></TD>
+      </TR>
+      <TR>
+         <TD class=Printer>State</TD>
+         <TD class=Printer 000000><<State>></TD>
+      </TR>
+      <TR>
+         <TD class=Printer>Country </TD>
+         <TD class=Printer><<Country>></TD>
+      </TR>
+      <TR>
+         <TD class=Printer 000000>Zip </TD>
+         <TD class=Printer 000000><<Zip>></TD>
+      </TR>
+      <TR>
+         <TD class=Printer>Phone</TD>
+         <TD class=Printer><<Phone>></TD>
+      </TR>
+      <TR>
+         <TD class=Printer 000000>Fax </TD>
+         <TD class=Printer 000000><<Fax>>&nbsp;</TD>
+      </TR>
+
+      </table>
+    </TD>
+    <TD width=30 class=Printer></TD>
+
+    <TD width=285 class=Printer valign=top>
+
+      <table border="1" width="285" cellspacing="1" cellpadding="2">
+      <TR>
+         <TD width=90 class=Printer 000000>Street Address </TD>
+         <TD width=195 class=Printer 000000><<ShippingStreetAddress>></TD>
+      </TR>
+      <TR>
+         <TD class=Printer>City</TD>
+         <TD class=Printer><<ShippingCity>></TD>
+      </TR>
+      <TR>
+         <TD class=Printer 000000>State</TD>
+         <TD class=Printer 000000><<ShippingState>></TD>
+      </TR>
+      <TR>
+         <TD class=Printer>Country</TD>
+         <TD class=Printer><<ShippingCountry>></TD>
+      </TR>
+      <TR>
+         <TD class=Printer 000000>Zip</TD>
+         <TD class=Printer 000000><<ShippingZip>></TD>
+      </TR>
+      <TR>
+         <TD class=Printer>Phone</TD>
+         <TD class=Printer><<ShippingPhone>></TD>
+      </TR>
+      <TR>
+         <TD class=Printer 000000>Fax </TD>
+         <TD class=Printer 000000><<ShippingFax>>&nbsp;</TD>
+      </TR>
+
+      </table>
+
+    </TD>
+    </TR>
+
+
+</table>
+
+   
+
+   <table border="0" width="600" cellspacing="0" cellpadding="2" align=center>
+   <TR><td colspan=3 align=left  height=10><IMG height=1 src='/store/img/pix.gif'></td></TR>
+   <TR><td colspan=3 align=left  class=Printer>&nbsp;<font color="#000000"><b>&nbsp;Payment Terms</b></font></td></TR>
+   <TR><td colspan=3 align=left  height=2><IMG height=1 src='/store/img/pix.gif'></td></TR>
+   <TR><td colspan=3 align=center ><<str_PaymentTerms>></td></tr>
+   <TR><td colspan=3 align=left  height=10><IMG height=1 src='/store/img/pix.gif'></td></TR>
+   </table>
+
+  <hr width=595 size=1 color=#000000 align=center> 
+
+   <table border="0" width="600" cellspacing="0" cellpadding="2" align=center>
+   <TR><td colspan=3 align=left  height=10><IMG height=1 src='/store/img/pix.gif'></td></TR>
+   <TR><td colspan=3 align=center  class=Printer >&nbsp;<font color="#000000"><b>Conditions of Sale </b></font></td></TR>
+   <TR><td colspan=3 align=left  height=12><IMG height=1 src='/store/img/pix.gif'></td></TR>
+
+   <TR><td colspan=3 align=left><<ConditionsOfSale>></td></tr>
+   <TR><td colspan=3 align=left  height=12><IMG height=1 src='/store/img/pix.gif'></td></TR>
+   <TR><td colspan=3 align=center  class=Printer><b> I read and agree with above described conditions of the sale</b>.</td></tr>
+   <TR><td colspan=3 align=left  height=18><IMG height=1 src='/store/img/pix.gif'></td></TR>
+   </table>
+
+
+   <table border="0" width="550" cellspacing="0" cellpadding="0" align=center>
+   <TR><td colspan=3 align=left  height=10><IMG height=1 src='/store/img/pix.gif'></td></TR>
+
+   <TR height=10><td align=left valign=bottom class=Printer><<NameOnCard>></td><td valign=bottom align=center  class=Printer ></td><td  valign=bottom align=right  class=Printer ><<DatePurchased>>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+   <TR><td height=1 align=left  class=Printer >____________________________</td><td align=center  class=Printer >________________________</td><td align=right  class=Printer >_________________</td>
+   <TR height=10><td align=left  class=Printer >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Name)</td><td align=center  class=Printer >(Signature)</td><td align=right  class=Printer >(Date)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+   <TR><td colspan=3 align=left  height=12><IMG height=1 src='/store/img/pix.gif'></td></TR>
+   </table>
+
+
+
+
+</center>
+</body>
+</html>
+
+

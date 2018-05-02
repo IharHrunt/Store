@@ -1,0 +1,1 @@
+var news="<span class=news>Store is now open! <br> <br> <a href=\'http://store.com\'><font color=\"#ff0000\"><b>Store.com</b></font></a>.<br> <br> Store is your BEST source of products <br><br>Please see us at ... in Washington D.C. booth xxx <br><br> </span>"

@@ -1,0 +1,449 @@
+<SCRIPT>
+
+function account_alert() {
+   alert("Please log in to your account first! (if you are a new visitor please use option 'New Account' to establish your own account at DatumModems.com)");
+}
+
+function checkRemove() {
+
+   if (confirm('Warning! Your account will be removed from datummodems.com database! Are you sure?')) { return true; }
+   else {
+     return false;
+   }
+}
+
+// fill 'Shipping Address' fields if they equal to 'Billing Address'
+function clearfields(f) {
+
+
+   if (document.form1.ClearField.checked) {
+     document.form1.ShippingStreetAddress.value=document.form1.StreetAddress.value;
+     document.form1.ShippingCity.value=document.form1.City.value;
+     document.form1.ShippingState.selectedIndex=document.form1.State.selectedIndex;
+     document.form1.ShippingCountry.selectedIndex=document.form1.Country.selectedIndex;
+     document.form1.ShippingZip.value=document.form1.Zip.value;
+     document.form1.ShippingPhone.value=document.form1.Phone.value;
+     document.form1.ShippingFax.value=document.form1.Fax.value;
+   }
+   else  {
+     document.form1.ShippingStreetAddress.value='';
+     document.form1.ShippingCity.value='';
+     document.form1.ShippingState.selectedIndex=0;
+     document.form1.ShippingCountry.selectedIndex=0
+     document.form1.ShippingZip.value='';
+     document.form1.ShippingPhone.value='';
+     document.form1.ShippingFax.value='';
+
+  }
+}
+
+// shift 'State' pull-box if country not equal USA
+function state(f) {
+     if (f.Country.selectedIndex != 1) {
+        f.State.options[0].selected=true;
+     }
+}
+// shift 'ShippingState' pull-box if ShippingCountry not equal USA
+function shippingstate(f) {
+     if (f.ShippingCountry.selectedIndex != 1) {
+        f.ShippingState.options[0].selected=true;
+     }
+}
+
+// set Country equal USA if selected state from 'State' pull-box
+function country(f) {
+  f.Country.options[1].selected=true;
+}
+// set ShippingCountry equal USA if selected state from 'ShippingState' pull-box
+function shippingcountry(f) {
+   f.ShippingCountry.options[1].selected=true;
+}
+
+// set type of business equal 'other' if Specify is not equal ''
+function typeofbusiness(f) {
+   if( f.TypeOfBusinessSpecify.value != '') {
+        f.TypeOfBusiness.options[1].selected=true;
+   }
+}
+
+// set Specify equal '' if TypeOfBusiness is not equal 'other'
+function typespecify(f) {
+   if (f.TypeOfBusiness.selectedIndex != 1) {
+      f.TypeOfBusinessSpecify.value = '';
+  }
+}
+
+//validate fields before submit
+function checkData () {
+
+ if (document.form1.CompanyName.value.length == 0) {
+   alert("The field \'Company Name\' is required"); document.form1.CompanyName.focus();  document.form1.CompanyName.select(); return;
+ }
+ if (document.form1.Email.value.length == 0) {
+   alert("The field \'Email\' is required"); document.form1.Email.focus();  document.form1.Email.select(); return;
+ }
+
+ if (document.form1.CustomerID.value.length < 4) {
+   alert("The field \'Login\' cannot be less than 4 chars."); document.form1.CustomerID.focus();  document.form1.CustomerID.select();  return;
+ }
+ if (document.form1.Password.value.length < 5) {
+   alert("The field \'Password\' cannot be less than 6 chars."); document.form1.Password.focus();  document.form1.Password.select();  return;
+ }
+ if (document.form1.Password.value.length != document.form1.Password2.value.length ) {
+   alert(" Fields \'Password\'  and \'Re-enter Password\' are not equal.");  document.form1.Password2.focus();  document.form1.Password2.select();  return;
+ }
+
+
+ if (document.form1.StreetAddress.value.length == 0) {
+   alert("The field \'Street Address\' (Billing Address) is required"); document.form1.StreetAddress.focus();  document.form1.StreetAddress.select(); return;
+ }
+ if (document.form1.City.value.length == 0) {
+   alert("The field \'City\' (Billing Address) is required"); document.form1.City.focus();  document.form1.City.select(); return;
+ }
+ if (document.form1.Country.selectedIndex == 0) {
+   alert("The field \'Country\' (Billing Address) is required"); document.form1.Country.focus(); return;
+ }
+ if (((document.form1.State.selectedIndex == 0)&&(document.form1.Country.selectedIndex != 1))||
+   ((document.form1.State.selectedIndex != 0)&&(document.form1.Country.selectedIndex == 1))) {
+ }
+ else {
+   alert("The field \'State\' (Billing Address) is required"); document.form1.State.focus(); return;
+ }
+ if (document.form1.Zip.value.length == 0) {
+   alert("The field \'Zip\' (Billing Address) is required"); document.form1.Zip.focus();  document.form1.Zip.select(); return;
+ }
+ if (document.form1.Phone.value.length == 0) {
+   alert("The field \'Phone\' (Billing Address) is required"); document.form1.Phone.focus();  document.form1.Phone.select(); return;
+ }
+ if (document.form1.ShippingStreetAddress.value.length == 0) {
+   alert("The field \'Street Address\' (Shipping Address) is required"); document.form1.ShippingStreetAddress.focus();  document.form1.ShippingStreetAddress.select(); return;
+ }
+ if (document.form1.ShippingCity.value.length == 0) {
+   alert("The field \'City\' (Shipping Address) is required"); document.form1.ShippingCity.focus();  document.form1.ShippingCity.select(); return;
+ }
+ if (document.form1.ShippingCountry.selectedIndex == 0) {
+   alert("The field \'Country\' (Shipping Address) is required"); document.form1.ShippingCountry.focus();  return;
+ }
+ if (((document.form1.ShippingState.selectedIndex == 0)&&(document.form1.ShippingCountry.selectedIndex != 1))||
+    ((document.form1.ShippingState.selectedIndex != 0)&&(document.form1.ShippingCountry.selectedIndex == 1))) {
+ }
+ else {
+   alert("The field \'State\' (Shipping Address) is required."); document.form1.ShippingState.focus();  return;
+ }
+ if (document.form1.ShippingZip.value.length == 0) {
+   alert("The field \'Zip\' (Shipping Address) is required"); document.form1.ShippingZip.focus();  document.form1.ShippingZip.select(); return;
+ }
+ if (document.form1.ShippingPhone.value.length == 0) {
+   alert("The field \'Phone\' (Shipping Address) is required"); document.form1.ShippingPhone.focus();  document.form1.ShippingPhone.select(); return;
+ }
+
+ if (confirm("Save information?")) {
+    document.form1.submit();
+ }
+ else {
+   return;
+ }
+}
+
+</SCRIPT>
+
+<center>
+
+<TABLE cellSpacing=0 cellPadding=0 width=600 border=0 align=center>
+<tr><td colspan=1 align=left width=600 height=13></td></tr>
+<TR><TD colspan=1 bgcolor="#468499" height=1 align=left class=map></TD></TR>
+<TR><TD colspan=1 bgcolor="#ffffff" height=1 align=left class=map></TD></TR>
+<tr bgcolor="#468499"><td colspan=3 height=18 align=left><font color='#FFffff'><b>&nbsp;&nbsp;&nbsp;&nbsp;My Account</b></font></td></tr>
+<TR><TD colspan=1 bgcolor="#ffffff" height=1 align=left class=map></TD></TR>
+<TR><TD colspan=1 bgcolor="#468499" height=1 align=left class=map></TD></TR>
+<TR><TD colspan=1 bgcolor="#ffffff" height=3 align=left class=map></TD></TR>
+</table>
+ 
+</center>
+
+
+<center>
+<FORM name="form1" METHOD="POST" ACTION="<<path_cgi_https>>account.pl">
+
+<TABLE cellSpacing=3 cellPadding=0 width=606 border=0 align=center>
+<tr>
+<td vAlign=top align=middle width=3></td>
+<td align=left width=600>
+
+   <table border="0" width="600" cellspacing="3" cellpadding="0">
+   <TR>
+    <td align=center width=50 valign=top><img src='/store/icon/icon_account_box.gif' width='22' height='22' border='0'></td>
+    <td align=left width=10 valign=top class=Account></td>
+    <td align=left width=540 valign=top class=Account><<str_title>></td>
+   </TR>
+  </table>
+</td>
+<td vAlign=top align=middle width=3></td>
+</tr>
+</table>
+
+
+
+   <table border="0" width="606" cellspacing="1" cellpadding="0">
+
+   <TR><td colspan=3 align=left  bgcolor="#468499" height=18 align=left class=Account>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ffffff"><b>I. General</b></font></td></TR>
+   <TR><td colspan=3 align=left  height=12><IMG height=1 src='/store/img/pix.gif'></td></TR>
+
+   <TR>
+   <TD width=285 class=Account valign=top align=center>
+
+      <table border="0" width="285" cellspacing="0" cellpadding="2" align=center>
+      <TR>
+         <TD width=110 class=Account>First Name</TD>
+         <TD width=175 class=Account><INPUT name=FirstName value="<<FirstName>>" maxLength=30  style="BORDER-RIGHT: #468499 1px solid; BORDER-TOP: #468499 1px solid;
+             FONT-SIZE: 12px; BORDER-LEFT: #468499 1px solid; WIDTH: 170px; COLOR: #182520; BORDER-BOTTOM: #468499 1px solid; FONT-FAMILY:  Arial, Helvetica, sans-serif" ></TD>
+      </TR>
+      <TR>
+         <TD class=Account>Last Name</TD>
+         <TD class=Account><INPUT name=LastName value="<<LastName>>" maxLength=30  style="BORDER-RIGHT: #468499 1px solid; BORDER-TOP: #468499 1px solid;
+             FONT-SIZE: 12px; BORDER-LEFT: #468499 1px solid; WIDTH: 170px; COLOR: #182520; BORDER-BOTTOM: #468499 1px solid; FONT-FAMILY:  Arial, Helvetica, sans-serif" ></TD>
+      </TR>
+      <TR>
+         <TD class=Account>Title</TD>
+         <TD class=Account><INPUT name=Title value="<<Title>>" maxLength=50  style="BORDER-RIGHT: #468499 1px solid; BORDER-TOP: #468499 1px solid;
+             FONT-SIZE: 12px; BORDER-LEFT: #468499 1px solid; WIDTH: 170px; COLOR: #182520; BORDER-BOTTOM: #468499 1px solid; FONT-FAMILY:  Arial, Helvetica, sans-serif" ></TD>
+      </TR>
+      <TR>
+         <TD class=Account>Company Name&nbsp;<font color="#ff0000">*</font></TD>
+         <TD class=Account><INPUT name=CompanyName value="<<CompanyName>>" maxLength=100  style="BORDER-RIGHT: #468499 1px solid; BORDER-TOP: #468499 1px solid;
+             FONT-SIZE: 12px; BORDER-LEFT: #468499 1px solid; WIDTH: 170px; COLOR: #182520; BORDER-BOTTOM: #468499 1px solid; FONT-FAMILY:  Arial, Helvetica, sans-serif" ></TD>
+      </TR>
+      <TR>
+         <TD class=Account>E-mail <font color="#ff0000">*</font></TD>
+         <TD class=Account><INPUT name=Email value="<<Email>>" maxLength=50  style="BORDER-RIGHT: #468499 1px solid; BORDER-TOP: #468499 1px solid;
+             FONT-SIZE: 12px; BORDER-LEFT: #468499 1px solid; WIDTH: 170px; COLOR: #182520; BORDER-BOTTOM: #468499 1px solid; FONT-FAMILY:  Arial, Helvetica, sans-serif" ></TD>
+      </TR>
+
+      </table>
+
+    </TD>
+    <TD width=36 class=Account></TD>
+
+    <TD width=285 class=Account valign=top>
+      <table border="0" width="285" cellspacing="0" cellpadding="2">
+      <TR>
+        <TD width=145 class=Account>Login (4-20 chars) <font color="#ff0000">*</font></TD>
+        <TD width=140 class=Account align=right><INPUT name=CustomerID value="<<CustomerID>>" maxLength=20  style="BORDER-RIGHT: #468499 1px solid; BORDER-TOP: #468499 1px solid;
+             FONT-SIZE: 12px; BORDER-LEFT: #468499 1px solid; WIDTH: 120px; COLOR: #182520; BORDER-BOTTOM: #468499 1px solid; FONT-FAMILY:  Arial, Helvetica, sans-serif" ></TD>
+      </TR>
+      <TR>
+        <TD class=Account>Password (6-10 chars) <font color="#ff0000">*</font></TD>
+        <TD class=Account align=right><INPUT type=password name=Password value="<<Password>>" maxLength=10  style="BORDER-RIGHT: #468499 1px solid; BORDER-TOP: #468499 1px solid;
+             FONT-SIZE: 12px; BORDER-LEFT: #468499 1px solid; WIDTH: 120px; COLOR: #182520; BORDER-BOTTOM: #468499 1px solid; FONT-FAMILY:  Arial, Helvetica, sans-serif" ></TD>
+      </TR>
+      <TR>
+        <TD class=Account>Re-enter password</TD>
+        <TD class=Account align=right><INPUT type=password name=Password2 value="<<Password2>>" maxLength=10  style="BORDER-RIGHT: #468499 1px solid; BORDER-TOP: #468499 1px solid;
+             FONT-SIZE: 12px; BORDER-LEFT: #468499 1px solid; WIDTH: 120px; COLOR: #182520; BORDER-BOTTOM: #468499 1px solid; FONT-FAMILY:  Arial, Helvetica, sans-serif" ></TD>
+      </TR>
+      <TR>
+        <TD colspan=2 width=285 class=Account><br>Subscribe for Store e-mail notifications <INPUT type=checkbox value=1 <<Subscriber>>  name=Subscriber></TD>
+      </TR>
+      </table>
+    </TD>
+    </TR>
+
+      <TR>
+         <TD colspan=3 class=Account>Payment Terms&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<<str_select4>></TD>
+      </TR>
+
+   <TR><td colspan=3 align=left height=12><IMG height=1 src='/store/img/pix.gif'></td></TR>
+
+
+   <TR>
+      <TD bgcolor="#468499" height=18 align=left class=Account>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ffffff"><b>II. Billing Address</b></font></td>
+      <TD> </TD>
+      <TD bgcolor="#468499" height=18 align=left class=Account>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ffffff"><b>III. Shipping Address</b></font></td>
+   </TR>
+
+
+   <TR>
+   <TD class=Account valign=top>
+
+      <table border="0" width="285" cellspacing="0" cellpadding="2">
+      <TR>
+         <TD colspan=2  width=285 class=Account>&nbsp;</TD>
+      </TR>
+      <TR>
+         <TD width=110 class=Account>Street Address <font color="#ff0000">*</font></TD>
+         <TD width=175 class=Account><INPUT name=StreetAddress value="<<StreetAddress>>" maxLength=100  style="BORDER-RIGHT: #468499 1px solid; BORDER-TOP: #468499 1px solid;
+             FONT-SIZE: 12px; BORDER-LEFT: #468499 1px solid; WIDTH: 170px; COLOR: #182520; BORDER-BOTTOM: #468499 1px solid; FONT-FAMILY:  Arial, Helvetica, sans-serif" ></TD>
+      </TR>
+      <TR>
+         <TD class=Account>City <font color="#ff0000">*</font></TD>
+         <TD class=Account><INPUT name=City value="<<City>>" maxLength=50  style="BORDER-RIGHT: #468499 1px solid; BORDER-TOP: #468499 1px solid;
+             FONT-SIZE: 12px; BORDER-LEFT: #468499 1px solid; WIDTH: 170px; COLOR: #182520; BORDER-BOTTOM: #468499 1px solid; FONT-FAMILY:  Arial, Helvetica, sans-serif" ></TD>
+      </TR>
+      <TR>
+         <TD class=Account>State <font color="#ff0000">*</font></TD>
+         <TD class=Account><<str_select2>></TD>
+      </TR>
+      <TR>
+         <TD class=Account>Country <font color="#ff0000">*</font></TD>
+         <TD class=Account><<str_select3>></TD>
+      </TR>
+      <TR>
+         <TD class=Account>Zip <font color="#ff0000">*</font></TD>
+         <TD class=Account><INPUT name=Zip value="<<Zip>>" maxLength=10  style="BORDER-RIGHT: #468499 1px solid; BORDER-TOP: #468499 1px solid;
+             FONT-SIZE: 12px; BORDER-LEFT: #468499 1px solid; WIDTH: 80px; COLOR: #182520; BORDER-BOTTOM: #468499 1px solid; FONT-FAMILY:  Arial, Helvetica, sans-serif" ></TD>
+      </TR>
+      <TR>
+         <TD class=Account>Phone <font color="#ff0000">*</font></TD>
+         <TD class=Account><INPUT name=Phone value="<<Phone>>" maxLength=30  style="BORDER-RIGHT: #468499 1px solid; BORDER-TOP: #468499 1px solid;
+             FONT-SIZE: 12px; BORDER-LEFT: #468499 1px solid; WIDTH: 170px; COLOR: #182520; BORDER-BOTTOM: #468499 1px solid; FONT-FAMILY:  Arial, Helvetica, sans-serif" ></TD>
+      </TR>
+      <TR>
+         <TD class=Account>Fax </TD>
+         <TD class=Account><INPUT name=Fax value="<<Fax>>" maxLength=30  style="BORDER-RIGHT: #468499 1px solid; BORDER-TOP: #468499 1px solid;
+             FONT-SIZE: 12px; BORDER-LEFT: #468499 1px solid; WIDTH: 170px; COLOR: #182520; BORDER-BOTTOM: #468499 1px solid; FONT-FAMILY:  Arial, Helvetica, sans-serif" ></TD>
+      </TR>
+
+      </table>
+    </TD>
+    <TD class=Account></TD>
+
+    <TD class=Account valign=top>
+      <table border="0" width="285" cellspacing="0" cellpadding="2">
+
+      <TR>
+         <TD colspan=2 width=285 align=right valign=top class=Account><u>If the same as billing check the box</u> <INPUT  type="checkbox" name="ClearField" <<Checked>> onClick="clearfields(this)"></TD>
+      </TR>
+      <TR>
+         <TD width=110 class=Account>Street Address <font color="#ff0000">*</font></TD>
+         <TD width=175 class=Account><INPUT name=ShippingStreetAddress value="<<ShippingStreetAddress>>" maxLength=100  style="BORDER-RIGHT: #468499 1px solid; BORDER-TOP: #468499 1px solid;
+             FONT-SIZE: 12px; BORDER-LEFT: #468499 1px solid; WIDTH: 170px; COLOR: #182520; BORDER-BOTTOM: #468499 1px solid; FONT-FAMILY:  Arial, Helvetica, sans-serif" ></TD>
+      </TR>
+      <TR>
+         <TD class=Account>City <font color="#ff0000">*</font></TD>
+         <TD class=Account><INPUT name=ShippingCity value="<<ShippingCity>>" maxLength=50  style="BORDER-RIGHT: #468499 1px solid; BORDER-TOP: #468499 1px solid;
+             FONT-SIZE: 12px; BORDER-LEFT: #468499 1px solid; WIDTH: 170px; COLOR: #182520; BORDER-BOTTOM: #468499 1px solid; FONT-FAMILY:  Arial, Helvetica, sans-serif" ></TD>
+      </TR>
+      <TR>
+         <TD class=Account>State <font color="#ff0000">*</font></TD>
+         <TD class=Account><<str_select21>></TD>
+      </TR>
+      <TR>
+         <TD class=Account>Country <font color="#ff0000">*</font></TD>
+         <TD class=Account><<str_select31>></TD>
+      </TR>
+      <TR>
+         <TD class=Account>Zip <font color="#ff0000">*</font></TD>
+         <TD class=Account><INPUT name=ShippingZip value="<<ShippingZip>>" maxLength=10  style="BORDER-RIGHT: #468499 1px solid; BORDER-TOP: #468499 1px solid;
+             FONT-SIZE: 12px; BORDER-LEFT: #468499 1px solid; WIDTH: 80px; COLOR: #182520; BORDER-BOTTOM: #468499 1px solid; FONT-FAMILY:  Arial, Helvetica, sans-serif" ></TD>
+      </TR>
+      <TR>
+         <TD class=Account>Phone <font color="#ff0000">*</font></TD>
+         <TD class=Account><INPUT name=ShippingPhone value="<<ShippingPhone>>" maxLength=30  style="BORDER-RIGHT: #468499 1px solid; BORDER-TOP: #468499 1px solid;
+             FONT-SIZE: 12px; BORDER-LEFT: #468499 1px solid; WIDTH: 170px; COLOR: #182520; BORDER-BOTTOM: #468499 1px solid; FONT-FAMILY:  Arial, Helvetica, sans-serif" ></TD>
+      </TR>
+      <TR>
+         <TD class=Account>Fax </TD>
+         <TD class=Account><INPUT name=ShippingFax value="<<ShippingFax>>" maxLength=30  style="BORDER-RIGHT: #468499 1px solid; BORDER-TOP: #468499 1px solid;
+             FONT-SIZE: 12px; BORDER-LEFT: #468499 1px solid; WIDTH: 170px; COLOR: #182520; BORDER-BOTTOM: #468499 1px solid; FONT-FAMILY:  Arial, Helvetica, sans-serif" ></TD>
+      </TR>
+
+      </table>
+
+    </TD>
+    </TR>
+
+   <TR><td colspan=3 align=left  height=12><IMG height=1 src='/store/img/pix.gif'></td></TR>
+   <TR><td colspan=3 bgcolor="#468499" height=18 align=left class=Account>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ffffff"><b>IV. Business</b></font></td></tr>
+   <TR><td colspan=3 align=left  height=12><IMG height=1 src='/store/img/pix.gif'></td></TR>
+   <TR><td colspan=3 align=center height=12 class=Account><b>Types of products interested in:</b></td></TR>
+
+   <TR><td colspan=3 align=left class=Account><<str_select5>></td></tr>
+
+
+   <TR><td colspan=3 align=left> 
+
+           <table border="0" width="600" cellspacing="0" cellpadding="1">
+          <TR><TD valign=top width=100 class=Account>Type of business</TD>
+            <TD width=470 class=Account><<str_select1>></TD>
+        </TR>
+          <TR><TD valign=top class=Account>&nbsp;</TD>
+            <TD class=Account>if other - specify</TD>
+        </TR>
+          <TR><TD valign=top class=Account>&nbsp;</TD>
+            <TD class=Account><input type=text style="BORDER-RIGHT: #468499 1px solid; BORDER-TOP: #468499 1px solid;
+            FONT-SIZE: 12px; BORDER-LEFT: #468499 1px solid; WIDTH: 500px; COLOR: #182520; BORDER-BOTTOM: #468499 1px solid; FONT-FAMILY:  Arial, Helvetica, sans-serif" name=TypeOfBusinessSpecify value="<<TypeOfBusinessSpecify>>"
+            maxlength=100  onchange="typeofbusiness(this.form);">
+            </TD>
+        </TR>
+          <TR><TD valign=top class=Account>&nbsp;</TD><TD class=Account></TD>
+        </TR>
+
+
+        </TABLE>
+
+   </td></TR>
+   <TR>
+   <TD class=Account valign=top>
+
+      <table border="0" width="285" cellspacing="0" cellpadding="2">
+         <TR>
+         <TD width=75 class=Account>Current Project Short Description</TD>
+         <TD width=210 class=Account><textarea rows=6 name=CurProjShortDescription style='BORDER-BOTTOM: #468499 1px solid; BORDER-LEFT: #468499 1px solid; BORDER-RIGHT: #468499 1px solid; BORDER-TOP: #468499 1px solid; COLOR: #182520; FONT-FAMILY:   Arial, ms sans serif; FONT-SIZE: 12px; WIDTH: 210'><<CurProjShortDescription>></textarea></TD>
+        </TR>
+         <TR>
+         <TD class=Account>Notes</TD>
+         <TD class=Account><textarea rows=6 name=Notes style='BORDER-BOTTOM: #468499 1px solid; BORDER-LEFT: #468499 1px solid; BORDER-RIGHT: #468499 1px solid; BORDER-TOP: #468499 1px solid; COLOR: #182520; FONT-FAMILY:  Arial, ms sans serif; FONT-SIZE: 12px; WIDTH: 210'><<Notes>></textarea></TD>
+        </TR>
+      </table>
+    </TD>
+   <TD class=Account></TD>
+
+   <TD class=Account valign=top>
+      <table border="0" width="285" cellspacing="0" cellpadding="2">
+         <TR>
+         <TD width=75 class=Account>Bank References</TD>
+         <TD width=210 class=Account><textarea rows=6 name=BankReferences style='BORDER-BOTTOM: #468499 1px solid; BORDER-LEFT: #468499 1px solid; BORDER-RIGHT: #468499 1px solid; BORDER-TOP: #468499 1px solid; COLOR: #182520; FONT-FAMILY: Arial, ms sans serif; FONT-SIZE: 12px; WIDTH: 210'><<BankReferences>></textarea></TD>
+        </TR>
+         <TR>
+         <TD class=Account>Trade References</TD>
+         <TD class=Account><textarea rows=6 name=TradeReferences style='BORDER-BOTTOM: #468499 1px solid; BORDER-LEFT: #468499 1px solid; BORDER-RIGHT: #468499 1px solid; BORDER-TOP: #468499 1px solid; COLOR: #182520; FONT-FAMILY:  Arial, ms sans serif; FONT-SIZE: 12px; WIDTH: 210'><<TradeReferences>></textarea></TD>
+        </TR>
+      </table>
+   </TD>
+   </TR>
+
+  </TABLE>
+
+<br>
+
+<center>
+<input type=hidden name=CustShifr value="<<CustShifr>>">
+<<str_button>>
+</center>
+<br>
+
+
+
+<TABLE cellSpacing=3 cellPadding=0 width=606 border=0 align=center>
+
+<tr>
+<td vAlign=top align=middle></td>
+<td align=left bgcolor="#468499" height=1><IMG height=1 src='/store/img/pix.gif'></td>
+<td vAlign=top align=middle></td>
+</tr>
+
+<tr>
+<td vAlign=top align=middle ></td>
+<td align=left  class=Account>&nbsp;Required fields are marked with (<FONT COLOR='red'size=2 >*</FONT>) asterisks.</td>
+<td vAlign=top align=middle ></td>
+</tr>
+
+</table>
+
+
+</center>
+</FORM>
+
+<br><br>
+
+

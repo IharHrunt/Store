@@ -1,0 +1,223 @@
+<TABLE cellSpacing=0 cellPadding=0 width=600 border=0 align=center>
+<tr><td colspan=2 align=left height=17></td></tr>
+
+ <tr bgcolor="#468499"><td height=18 align=left width=50%  class=Account><font color='#FFffff'><b>&nbsp;&nbsp;&nbsp;&nbsp;Order # <<StoreOrderNumber>> Information</b></font></td>
+       <td align=right width=50%   class=Account><font color='#FFffff'><b><i><<DatePurchased>></i></b>&nbsp;&nbsp;</font></td>
+   </tr>
+<tr><td colspan=2 align=left width=600 height=3></td></tr>
+<tr><td colspan=2 align=left width=600><<str_menu_top>></td></tr>
+<tr><td colspan=2 align=left width=600 height=12></td></tr>
+</table>
+
+
+
+
+<TABLE cellSpacing=1 cellPadding=0 width=604 align=center  border=0 valign="MIDDLE">
+<TR>
+ <TD height=18 width=89 bgcolor="#468499" class=Account align=middle ><font color=#ffffff><b>Unit</b></font></TD>
+ <TD width=300 bgcolor="#468499" class=Account align=middle ><font color=#ffffff><b>Name</b></font></TD>
+ <TD width=75 bgcolor="#468499" class=Account align=middle ><font color=#ffffff><b>Unit Price,&nbsp;$</b></font></TD>
+ <TD width=55 bgcolor="#468499" class=Account align=middle ><font color=#ffffff><b>Quantity</b></font></TD>
+ <TD width=66 bgcolor="#468499" class=Account align=middle ><font color=#ffffff><b>Total,&nbsp;$</b></font></TD>
+</TR>
+
+<<str_table>>
+</table>
+
+
+
+
+ <TABLE cellSpacing=0 cellPadding=0 width=604 border=0 align=center>
+
+  <tr><td align=center colspan=4  height=5><IMG height=1 src='/store/img/pix.gif'></td></tr>
+  <tr><td align=center colspan=4  bgcolor="#468499" height=17  class=Account><font color='#FFffff'><b>Total Cost</b></font></td></tr>
+  <tr><td align=center colspan=4  width=604 height=1><IMG height=2 src='/store/img/pix.gif'></td></tr>
+  <tr>
+    <td vAlign=top align=center width=472></td>
+    <td vAlign=top align=left width=1 bgcolor="#468499"><IMG height=1 src='/store/img/pix.gif'></td>
+    <td vAlign=top align=left width=9></td>
+    <td vAlign=top align=left width=110>
+
+
+    </td>
+  </tr>
+  <tr>
+    <td vAlign=middle align=right class=Account height=40>
+    <b>Sub-Total:&nbsp;&nbsp;&nbsp;<br>
+    Established Discount Level:&nbsp;&nbsp;&nbsp;</b></td>
+    <td vAlign=top align=left bgcolor="#468499"><IMG height=1 src='/store/img/pix.gif'></td>
+    <td vAlign=top align=right </td>
+    <td  align=right colspan=2 class=Account>
+     <b>$ <<SubTotal>></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+     <b>% <<EstabDiscountLevel>></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+
+</td>
+  </tr>
+  <tr><td align=center colspan=4 bgcolor="#468499"  height=1><IMG height=1 src='/store/img/pix.gif'></td></tr>
+  <tr>
+    <td vAlign=top align=center ></td>
+    <td vAlign=top align=left bgcolor="#468499"><IMG height=1 src='/store/img/pix.gif'></td>
+    <td vAlign=top align=left ></td>
+    <td colspan=2 height=12 ></td>
+  </tr>
+  <tr>
+    <td vAlign=middle align=right class=Account><b>Total:&nbsp;&nbsp;&nbsp;</b><br></td>
+    <td vAlign=top align=left  bgcolor="#468499"><IMG height=1 src='/store/img/pix.gif'></td>
+    <td vAlign=top align=left ></td>
+    <td vAlign=top align=right class=Account><font color=#ff0000><b>$ <<Total>></b></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td vAlign=middle align=right class=Account></td>
+    <td vAlign=top align=left bgcolor="#468499"><IMG height=1 src='/store/img/pix.gif'></td>
+    <td vAlign=top align=left ></td>
+    <td vAlign=top align=right class=Account height=10></td>
+  </tr>
+ </table>
+
+
+
+   <table border="0" width="600" cellspacing="0" cellpadding="2" align=center>
+
+   <TR><td colspan=3 align=left  height=1><IMG height=1 src='/store/img/pix.gif'></td></TR>
+   <TR><td colspan=3 align=center height=18  bgcolor="#468499"  class=Account>&nbsp;<font color="#ffffff"><b>Customer Information</b></font></td></TR>
+   <TR><td colspan=3 align=left  height=12><IMG height=1 src='/store/img/pix.gif'></td></TR>
+
+   <TR>
+   <TD width=285 class=Account valign=top>
+
+
+      <table border="0" width="285" cellspacing="1" cellpadding="2">
+      <TR>
+         <TD width="100" class=Account bgcolor=#d8e9f0>First Name</TD>
+         <TD width="185" class=Account bgcolor=#d8e9f0><<FirstName>>&nbsp;</TD>
+      </TR>
+      <TR>
+         <TD class=Account>Last Name</TD>
+         <TD class=Account><<LastName>></TD>
+      </TR>
+      <TR>
+         <TD class=Account bgcolor=#d8e9f0>Title</TD>
+         <TD class=Account bgcolor=#d8e9f0><<Title>></TD>
+      </TR>
+
+      </table>
+    </TD>
+    <TD width=30 class=Account></TD>
+
+    <TD width=285 class=Account valign=top>
+      <table border="0" width="285" cellspacing="1" cellpadding="2">
+
+      <TR>
+         <TD width=100 class=Account bgcolor=#d8e9f0>Company Name</TD>
+         <TD width=185 class=Account bgcolor=#d8e9f0><<CompanyName>></TD>
+      </TR>
+      <TR>
+         <TD class=Account>E-mail</TD>
+         <TD class=Account><<Email>></TD>
+      </TR>
+      <TR>
+         <TD class=Account bgcolor=#d8e9f0>&nbsp;</TD>
+         <TD class=Account bgcolor=#d8e9f0>&nbsp;</TD>
+      </TR>
+
+      </table>
+    </TD>
+    </TR>
+
+   <TR><td colspan=3 align=left  height=12><IMG height=1 src='/store/img/pix.gif'></td></TR>
+   <TR>
+      <TD valign=top bgcolor="#468499" height=18 class=Account >&nbsp;<font color="#ffffff"><b>Billing Address</b></font></td>
+      <TD valign=top  ></TD>
+      <TD valign=top bgcolor="#468499" height=18 class=Account>&nbsp;<font color="#ffffff"><b>Shipping Address</b></font></td>
+   </TR>
+
+   <TR><td colspan=3 align=left height=12><IMG height=1 src='/store/img/pix.gif'></td></TR>
+   <TR>
+   <TD class=Account valign=top>
+
+      <table border="0" width="285" cellspacing="1" cellpadding="2">
+      <TR>
+         <TD width=100 class=Account bgcolor=#d8e9f0>Street Address</TD>
+         <TD width=185 class=Account bgcolor=#d8e9f0><<StreetAddress>></TD>
+      </TR>
+      <TR>
+         <TD class=Account>City</TD>
+         <TD class=Account><<City>></TD>
+      </TR>
+      <TR>
+         <TD class=Account bgcolor=#d8e9f0>State</TD>
+         <TD class=Account bgcolor=#d8e9f0><<State>></TD>
+      </TR>
+      <TR>
+         <TD class=Account>Country </TD>
+         <TD class=Account><<Country>></TD>
+      </TR>
+      <TR>
+         <TD class=Account bgcolor=#d8e9f0>Zip </TD>
+         <TD class=Account bgcolor=#d8e9f0><<Zip>></TD>
+      </TR>
+      <TR>
+         <TD class=Account>Phone</TD>
+         <TD class=Account><<Phone>></TD>
+      </TR>
+      <TR>
+         <TD class=Account bgcolor=#d8e9f0>Fax </TD>
+         <TD class=Account bgcolor=#d8e9f0><<Fax>></TD>
+      </TR>
+
+      </table>
+    </TD>
+    <TD class=Account></TD>
+
+    <TD class=Account valign=top>
+
+      <table border="0" width="285" cellspacing="1" cellpadding="2">
+      <TR>
+         <TD width=100 class=Account bgcolor=#d8e9f0>Street Address </TD>
+         <TD width=185 class=Account bgcolor=#d8e9f0><<ShippingStreetAddress>></TD>
+      </TR>
+      <TR>
+         <TD class=Account>City</TD>
+         <TD class=Account><<ShippingCity>></TD>
+      </TR>
+      <TR>
+         <TD class=Account bgcolor=#d8e9f0>State</TD>
+         <TD class=Account bgcolor=#d8e9f0><<ShippingState>></TD>
+      </TR>
+      <TR>
+         <TD class=Account>Country</TD>
+         <TD class=Account><<ShippingCountry>></TD>
+      </TR>
+      <TR>
+         <TD class=Account bgcolor=#d8e9f0>Zip</TD>
+         <TD class=Account bgcolor=#d8e9f0><<ShippingZip>></TD>
+      </TR>
+      <TR>
+         <TD class=Account>Phone</TD>
+         <TD class=Account><<ShippingPhone>></TD>
+      </TR>
+      <TR>
+         <TD class=Account bgcolor=#d8e9f0>Fax </TD>
+         <TD class=Account bgcolor=#d8e9f0><<ShippingFax>></TD>
+      </TR>
+
+      </table>
+
+    </TD>
+    </TR>
+
+
+</table>
+
+
+   <table border="0" width="560" cellspacing="0" cellpadding="2" align=center>
+   <TR><td colspan=3 align=left  height=12><IMG height=1 src='/store/img/pix.gif'></td></TR>
+   <TR><td colspan=3 align=center height=18 ><<str_PaymentTerms>></td></tr>
+   </table>
+
+
+<<str_printer_bottom>>
+
+
+<br><br>

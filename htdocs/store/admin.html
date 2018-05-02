@@ -1,0 +1,60 @@
+<HTML>
+
+<TITLE>Store Admin</TITLE>
+
+<HEAD>
+
+
+<SCRIPT>
+
+function checkData () {
+   if (document.form1.user.value.length < 4) {
+      alert('User Name cannot be less than 4 chars.');
+      document.form1.user.focus(); document.form1.user.select();
+      return false
+     }
+   if (document.form1.pass.value.length < 6) {
+      alert('Password cannot be less than 6 chars.');
+      document.form1.pass.focus(); document.form1.pass.select();
+      return false
+     }
+   else { return true}
+}
+
+
+function setFocus() {
+
+  document.form1.user.focus(); document.form1.user.select();      
+}
+
+</SCRIPT>
+</HEAD>
+
+<BODY BGCOLOR='#CCCCCC' onLoad='setFocus()'>
+<FORM NAME="form1" METHOD='POST' ACTION='http://localhost/cgi-bin/store/adm_check.pl' onSubmit="return checkData()">
+<CENTER>
+
+<H1>Store Admin</H1>
+<A onclick="window.external.addFavorite('http://www.store.com/store/store.html', 'Store Admin'); return false;" href=http://store.com/store/store.html><SAMP>Add To Favorite</SAMP></A> 
+<br><br>
+<table border='0' width='100%' cellspacing='1' cellpadding='1'>
+<TR><TH width='42%'></TH><TH width='58%'></TH></TR>
+<TR><TD align='right'><SAMP>User Name:</SAMP></TD>
+    <TD align='left'><input type=text name=user value=''
+                     maxlength=20 size=20></TD></TR>
+<TR><TD align='right'><SAMP>Password:</SAMP></TD>
+    <TD align='left'><input type=PASSWORD name=pass value=''
+                     maxlength=20 size=20></TD></TR>
+</Table>
+<BR><BR>
+<input type=submit name=start value='    Ok    ' >
+<input type=reset  value= '  Reset  ' >
+<br><br>
+
+<!--<img src="http://localhost/cgi-bin/store/counter.pl?id=doom2&dig=9" >-->
+<br>
+<img src="http://localhost/cgi-bin/store/counter.pl" >
+
+
+
+</CENTER></FORM></BODY></HTML>

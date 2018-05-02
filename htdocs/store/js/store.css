@@ -1,0 +1,336 @@
+BODY {
+	FONT-WEIGHT: normal; FONT-SIZE: 15px; MARGIN: 0px; COLOR: #0E4F65; FONT-FAMILY: Arial, Helvetica, Verdana, sans-serif
+}
+TD {
+	FONT-WEIGHT: normal; FONT-SIZE: 13px; COLOR: #000000; FONT-FAMILY:  Arial, Helvetica, Verdana, sans-serif
+}
+TD.ware {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, Verdana, sans-serif
+}
+
+TD.ware2 {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, Verdana, sans-serif
+}
+
+TD.ware3 {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #0E4F65; FONT-FAMILY: Arial, Helvetica, Verdana, sans-serif
+}
+
+TD.vitrina {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, Verdana, sans-serif
+}
+
+A {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #1F4872; FONT-FAMILY: Tahoma, Helvetica, Verdana, sans-serif; TEXT-DECORATION: none;
+}
+
+A:hover {
+	 COLOR: #FF0000;
+}
+
+A.map {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #1F4872; FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif; TEXT-DECORATION: none;
+}
+A.map:hover {
+	 COLOR: #FF0000;
+}
+
+TD.map {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #1F4872; FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif; 
+}
+
+
+.mr {
+	FONT-WEIGHT: bold;  FONT-SIZE: 9px; COLOR: #0E4F65; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+A.mr:hover {
+	TEXT-DECORATION: underline;
+}
+
+.mr_grey {
+	FONT-WEIGHT: bold;  FONT-SIZE: 9px; COLOR: #aaaaaa; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+A.mr_grey:hover {
+	COLOR: #aaaaaa;
+}
+
+
+.mr2 {
+	FONT-WEIGHT: bold;  FONT-SIZE: 11px; COLOR: #ff0000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: underline;
+}
+A.mr2:hover {
+	COLOR: #ff0000; TEXT-DECORATION: none;
+}
+
+.mr3 {
+	FONT-WEIGHT: normal;  FONT-SIZE: 12px; COLOR: #0E4F65; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: underline;
+}
+A.mr3:hover {
+	COLOR: #ff0000; 
+}
+
+.mr4 {
+	FONT-WEIGHT: normal;  FONT-SIZE: 12px; COLOR: #1F4872; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: underline;
+}
+A.mr4:hover {
+	COLOR: #ff0000; 
+}
+
+
+.mr_sm {
+	FONT-WEIGHT: normal;  FONT-SIZE: 9px; COLOR: #0E4F65; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+A.mr_sm:hover {
+	COLOR: #ff0000
+}
+
+A.PathSite {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #1F4872; FONT-FAMILY:  Arial, Helvetica, Verdana, sans-serif
+}
+A.PathSite:hover {
+	COLOR: #ff0000
+}
+
+A.PathSite2 {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #1F4872; FONT-FAMILY:  Verdana, sans-serif
+}
+A.PathSite2:hover {
+	COLOR: #ff0000
+}
+
+A.Email {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #1F4872; FONT-FAMILY: Verdana
+}
+A.Email:hover {
+	COLOR: #ff0000
+}
+
+
+
+
+A.Manuf {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #1F4872; FONT-FAMILY: Arial, Helvetica, Verdana, sans-serif
+}
+A.Manuf:hover {
+	COLOR: #ff0000
+}
+
+TD.Account {
+        FONT-WEIGHT: normal;  FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY:   Arial, Helvetica, sans-serif; 
+}
+
+TD.Printer {
+        FONT-WEIGHT: normal;  FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY:  Tahoma, Arial, Helvetica, sans-serif; 
+}
+
+
+
+
+A.vitrina {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #0E4F65; FONT-FAMILY: Arial, Helvetica, Verdana, sans-serif; TEXT-DECORATION: none
+}
+A.vitrina:hover {
+	COLOR: #ff0000
+}
+
+
+#menuHolder { 
+        position:relative; left:0; top:0; visibility:visible; z-index:1; 
+}
+
+
+.expandable {
+        FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #1F4872; FONT-FAMILY: Arial, Helvetica, Verdana, sans-serif; TEXT-DECORATION: none; cursor:hand; 
+}
+
+.expanded { cursor:hand;
+}
+
+.collapsed {
+        display:none
+}
+
+.expanded2 {
+}
+
+.collapsed2 {
+        display:none
+}
+
+
+TD.tabt {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; COLOR: #1F4872; FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif
+}
+
+TD.tabt2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; COLOR: #2A4C6D; FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif
+}
+
+
+A.tabt {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #0E4F65; FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif
+}
+A.tabt:hover {
+	COLOR: #ff0000
+}
+
+.Tabs {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #FFFFFF; FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none;
+}
+
+A.Tabs {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #0E4F65; FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: underline;
+}
+A.Tabs:hover {	
+        TEXT-DECORATION: none; COLOR: #ff0000;
+}
+
+
+A.more {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #0E4F65; FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif
+}
+A.more:hover {
+	COLOR: #ff0000
+}
+
+
+tabt {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; COLOR: #0E4F65; FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif
+}
+
+
+A.Search {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #1F4872; FONT-FAMILY:  Arial, Helvetica, sans-serif;
+}
+A.Search:hover {
+	COLOR: #ff0000
+}
+
+
+TD.opt {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #000000 FONT-FAMILY:  tahoma, Arial, Helvetica, sans-serif
+}
+
+
+A.MenuBottom {
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #ffffff; FONT-FAMILY: tahoma, sans-serif; TEXT-DECORATION: underline;
+}
+A.MenuBottom:hover {
+	COLOR: #ffffff; TEXT-DECORATION: none;
+}
+
+A.MenuTop {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #0E4F65; FONT-FAMILY: tahoma, sans-serif; TEXT-DECORATION: underline;
+}
+A.MenuTop:hover {
+	COLOR: #0E4F65; TEXT-DECORATION: none;
+}
+
+A.MenuTop2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #0E4F65; FONT-FAMILY: tahoma, sans-serif; TEXT-DECORATION: underline;
+}
+A.MenuTop2:hover {
+	COLOR: #ff0000; 
+}
+
+
+.Pages {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ff0000; FONT-FAMILY:  Tahoma, Arial; TEXT-DECORATION: none; 
+}
+
+A.Pages {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #1F4872; FONT-FAMILY:  Tahoma, Arial; TEXT-DECORATION: underline; 
+}
+A.Pages:hover {
+	COLOR: #ff0000
+}
+
+A.Special {
+	FONT-WEIGHT: bold;  FONT-SIZE: 11px; COLOR: #0E4F65; FONT-FAMILY:  Tahoma;  TEXT-DECORATION: none;
+}
+A.Special:hover {
+	COLOR: #ff0000; 
+}
+
+A.NewP {
+	FONT-WEIGHT: bold;  FONT-SIZE: 11px; COLOR: #1F4872; FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif;  TEXT-DECORATION: none;
+}
+A.NewP:hover {
+	COLOR: #ff0000; 
+}
+
+A.TopP {
+	FONT-WEIGHT: bold;  FONT-SIZE: 11px; COLOR: #0E4F65; FONT-FAMILY:  Tahoma;  TEXT-DECORATION: none;
+}
+A.TopP:hover {
+	COLOR: #ff0000; 
+}
+
+
+.SpecialPrice {
+	FONT-WEIGHT: bold;  FONT-SIZE: 14px; COLOR: #FF0000; FONT-FAMILY: Arial, Helvetica, sans-serif;  TEXT-DECORATION: none;
+}
+
+.NewPrice {
+	FONT-WEIGHT: bold;  FONT-SIZE: 14px; COLOR: #0000ff; FONT-FAMILY: Arial, Helvetica, sans-serif;  TEXT-DECORATION: none;
+}
+
+.TitleTop {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #FFFFFF; FONT-FAMILY:  tahoma, Arial, Helvetica, sans-serif
+}
+
+a.StoreTop {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #FFFFFF; FONT-FAMILY:  tahoma, Arial, Helvetica, sans-serif; TEXT-DECORATION: underline;
+}
+A.StoreTop:hover {
+	 TEXT-DECORATION: none;
+}
+
+.news {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #080833; FONT-FAMILY: Arial, Helvetica, Verdana, sans-serif
+}
+A.ProductNumber {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Verdana, sans-serif; TEXT-DECORATION: none;
+}
+
+A.ProductNumber:hover {
+	 COLOR: #FF0000; TEXT-DECORATION: underline;
+}
+
+.ProductNumber {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Verdana, sans-serif; TEXT-DECORATION: none;
+}
+
+A.CategoryDescription {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; MARGIN: 0px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, Verdana, sans-serif; TEXT-DECORATION: underline;
+}
+A.CategoryDescription:hover {
+	 TEXT-DECORATION: none;
+}
+
+
+a.ButtonStop {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #FFFFFF; FONT-FAMILY:  tahoma, Arial, Helvetica, sans-serif; TEXT-DECORATION: underline;
+}
+A.ButtonStop:hover {
+        TEXT-DECORATION: none;
+}
+
+.ButtonPlay {
+        display:none;
+}
+A.PriceType {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #1F4872; FONT-FAMILY: Tahoma, Helvetica, Verdana, sans-serif; TEXT-DECORATION: underline;
+}
+A.PriceType:hover {
+	 COLOR: #FF0000;
+}
+
+a.StoreFavor {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #FFFFFF; FONT-FAMILY:  tahoma, Arial, Helvetica, sans-serif; TEXT-DECORATION: underline;
+}
+A.StoreFavor:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #FFFFFF; FONT-FAMILY:  tahoma, Arial, Helvetica, sans-serif; TEXT-DECORATION: none;
+}
+
+

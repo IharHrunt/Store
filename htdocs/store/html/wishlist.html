@@ -1,0 +1,127 @@
+<TABLE cellSpacing=0 cellPadding=0 width=600 border=0 align=center>
+<tr><td align=left width=600 height=13></td></tr>
+<TR><TD bgcolor="#468499" height=1 align=left class=map></TD></TR>
+<TR><TD bgcolor="#ffffff" height=1 align=left class=map></TD></TR>
+<tr bgcolor="#468499"><td height=18 align=left><font color='#FFffff'><b>&nbsp;&nbsp;&nbsp;&nbsp;My Wish List</b></font></td></tr>
+<TR><TD bgcolor="#ffffff" height=1 align=left class=map></TD></TR>
+<TR><TD bgcolor="#468499" height=1 align=left class=map></TD></TR>
+<tr><td height=18><<str_menu_top>></td></tr>
+<TR><TD bgcolor="#ffffff" height=8 align=left class=map></TD></TR>
+</table>
+
+
+<form name='wishlist' method=post action='<<path_cgi>>wishlist.pl'   style='margin:0'>
+<input type=hidden name=comWish value='Recalculate' >
+
+<SCRIPT>
+  function recalculate() {
+    document.wishlist.comWish.value='Recalculate';
+    document.wishlist.submit();
+  }
+
+  function add_to_cart() {
+
+    mycount=0;
+
+    <<hTA>>
+
+    if ( mycount == 0 ) { alert ('No selected item(s) to add to shopping cart!');  }
+    else { 
+      document.wishlist.comWish.value='AddToCart';
+      document.wishlist.submit();
+    }
+  }
+
+</SCRIPT>
+
+
+<TABLE cellSpacing=1 cellPadding=0 width=602 align=center  border=0 valign="MIDDLE">
+<TR>
+ <TD width=30 bgcolor="#468499" class=Account align=middle ><font color=#ffffff><b>Add</b></font></TD>
+ <TD height=18 width=72 bgcolor="#468499" class=Account align=middle ><font color=#ffffff><b>Unit</b></font></TD>
+ <TD width=290 bgcolor="#468499" class=Account align=middle ><font color=#ffffff><b>Name</b></font></TD>
+ <TD width=60 bgcolor="#468499" class=Account align=middle ><font color=#ffffff><b>Price,&nbsp;$</b></font></TD>
+ <TD width=60 bgcolor="#468499"class=Account align=middle ><font color=#ffffff><b>Quantity</b></font></TD>
+ <TD width=60 bgcolor="#468499" class=Account align=middle ><font color=#ffffff><b>Total,&nbsp;$</b></font></TD>
+ <TD width=30 bgcolor="#468499" class=Account align=middle ><font color=#ffffff><b>Del</b></font></TD>
+</TR>
+
+<<str_table>>
+</table>
+
+
+<TABLE cellSpacing=3 cellPadding=0 width=600 border=0 align=center>
+
+<tr>
+<td vAlign=top align=middle width=3></td>
+<td vAlign=top align=middle width=600>
+
+
+</td>
+<td vAlign=top></td>
+</tr>
+</table>
+
+<TABLE cellSpacing=0 cellPadding=0 width="600" align=center border=0 valign="bottom">
+<TR>
+ <TD height=10 colspan=5 align=right></TD>
+</TR>
+
+<TR>
+ <TD height=18 colspan=5 valign=bottom align=right> <A href="javascript:add_to_cart()" title="add to shopping cart"><IMG  src="/store/btn/btn_add_wish.gif" width=140 height=20  border=0></A>
+&nbsp; <a href="javascript:recalculate()" title="recalculate"><INPUT type=image  src="/store/btn/btn_recalculate.gif"  width=97 height=20 border=0></a> 
+&nbsp; <A href='<<pathUrlProduct>>' title="continue ordering"><IMG  src="/store/btn/btn_continue.gif" width=130 height=20  border=0></A></TD>
+</TR>
+</TABLE>
+
+</form>
+
+ <TABLE cellSpacing=0 cellPadding=0 width=600 border=0 align=center>
+
+  <tr><td align=center colspan=4  height=10><IMG height=1 src='/store/img/pix.gif'></td></tr>
+  <tr><td align=center colspan=4  bgcolor="#468499" height=17><font color='#FFffff' class=Account><b>Total Cost</b></font></td></tr>
+  <tr><td align=center colspan=4  width=600 height=1><IMG height=2 src='/store/img/pix.gif'></td></tr>
+  <tr>
+    <td vAlign=top align=center width=470></td>
+    <td vAlign=top align=left width=1 bgcolor="#468499"><IMG height=1 src='/store/img/pix.gif'></td>
+    <td vAlign=top align=left width=9></td>
+    <td vAlign=top align=left width=110>
+
+
+    </td>
+  </tr>
+  <tr>
+    <td vAlign=middle align=right class=Account height=40>
+    <b>Sub-Total:&nbsp;&nbsp;&nbsp;<br>
+    Established Discount Level:&nbsp;&nbsp;&nbsp;</b></td>
+    <td vAlign=top align=left bgcolor="#468499"><IMG height=1 src='/store/img/pix.gif'></td>
+    <td vAlign=top align=right </td>
+    <td  align=right colspan=2 class=Account>
+     <b>$ <<SubTotal>></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+     <b>% <<EstabDiscountLevel>></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+
+</td>
+  </tr>
+  <tr><td align=center colspan=4 bgcolor="#468499"  height=1><IMG height=1 src='/store/img/pix.gif'></td></tr>
+  <tr>
+    <td vAlign=top align=center ></td>
+    <td vAlign=top align=left bgcolor="#468499"><IMG height=1 src='/store/img/pix.gif'></td>
+    <td vAlign=top align=left ></td>
+    <td colspan=2 height=12 ></td>
+  </tr>
+  <tr>
+    <td vAlign=middle align=right class=Account><b>Total:&nbsp;&nbsp;&nbsp;</b><br></td>
+    <td vAlign=top align=left  bgcolor="#468499"><IMG height=1 src='/store/img/pix.gif'></td>
+    <td vAlign=top align=left ></td>
+    <td vAlign=top align=right class=Account><font color=#ff0000><b>$ <<Total>></b></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td vAlign=middle align=right class=Account></td>
+    <td vAlign=top align=left bgcolor="#468499"><IMG height=1 src='/store/img/pix.gif'></td>
+    <td vAlign=top align=left ></td>
+    <td vAlign=top align=right class=Account height=10></td>
+  </tr>
+ </table>
+
+
